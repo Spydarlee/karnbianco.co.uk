@@ -1,0 +1,14 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Projects
+  order: 1
+  icon: feather:box
+title: Projects
+description: "Games, websites, tools and other (solo and professional) projects I've worked on."
+---
+<h1>{% icon "feather:box", { "class": "icon-lg" } %} {{title}}</h1>
+<p>Games, websites, tools and other (solo and professional) projects that I've worked on. Check out my <a href="https://github.com/Spydarlee" target="_blank">Github profile</a> for more of my open source work.</p>
+
+{% set projectslist = collections.projects %}
+{% include "projectsgrid.njk" %}

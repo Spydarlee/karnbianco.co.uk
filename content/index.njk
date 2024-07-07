@@ -1,0 +1,31 @@
+---
+layout: layouts/home.njk
+numLatestItemsToShow: 2
+description: Digital home of Karn Bianco - programmer, writer, designer, organiser, dog lover, etc.
+---
+
+<p>👋 Hi, I'm Karn (they/them) and I'm a jack of various trades. Programmer, writer, amateur photographer, game developer, etc. <a href="/about">Read more about me</a>.</p>
+
+<hr>
+
+<h2><a href="/writing">{% icon "feather:edit-2", { "class": "icon-lg" } %}Latest Writing</a></h2>
+{% set postsCount = collections.posts | length %}
+{% set postslist = collections.posts | head(-1 * numLatestItemsToShow) %}
+{% include "postsgrid.njk" %}
+<p><a href="/writing/">{% icon "feather:arrow-right", '{ "class": "icon" }'%}Explore all {{ postsCount }} pieces of writing</a></p>
+
+<hr>
+
+<h2><a href="/photos">{% icon "feather:camera", { "class": "icon-lg" } %}Latest Photos</a></h2>
+{% set photosCount = collections.photos | length %}
+{% set photoslist = collections.photos | head(-1 * numLatestItemsToShow) %}
+{% include "photosgrid.njk" %}
+<p><a href="/photos/">{% icon "feather:arrow-right", '{ "class": "icon" }'%}Browse all {{ photosCount }} photo galleries</a></p>
+
+<hr>
+
+<h2><a href="/projects">{% icon "feather:box", { "class": "icon-lg" } %}Latest Projects</a></h2>
+{% set projectCount = collections.projects | length %}
+{% set projectslist = collections.projects | head(-1 * numLatestItemsToShow) %}
+{% include "projectsgrid.njk" %}
+<p><a href="/projects/">{% icon "feather:arrow-right", '{ "class": "icon" }'%}Browse all {{ projectCount }} projects</a></p>

@@ -1,0 +1,25 @@
+<div class="card-grid">
+{% for project in projectslist | reverse %}
+
+  <div class="card">
+    <a href="{{ project.url }}">{%- image project.data.summaryImage, "", [340], "", project %}</a>
+    <div class="card-container">
+      <a href="{{ project.url }}"class="card-title">{{ project.data.title }}</a>
+
+      <ul class="post-metadata">
+        <li>📅 <time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate("LLL yyyy") }}</time></li>
+        {% if (project.data.tags | filterTagList).length %}
+        <li>🏷️ {%- for tag in project.data.tags | filterTagList %}
+          {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+            <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}
+          {%- endfor %}
+        </li>
+        {% endif %}
+      </ul>
+
+      <p class="card-description">{{ project.data.description }}</p>
+    </div>
+  </div>
+
+{% endfor %}
+</div>

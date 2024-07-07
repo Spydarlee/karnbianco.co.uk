@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Doughnut Economics</title>
+	<style>
+		game {
+			margin: 0px 0px 1px 0px; /* the extra 1px allows the iOS inner/outer check to work */
+			padding: 0;
+			background-color: #000;
+		    width:100%;
+		    height:100%;
+		    position:fixed;
+		    top:0px;
+		    left:0px;
+		    background-repeat:no-repeat;
+		    background-position: center center;
+		}
+	</style>
+	
+	<script src="js/phaser.min.js"></script>
+	
+</head>
+<body>
+
+	<div id="game" style="width:100%;height:100%;position:fixed;top:0px;left:0px;background-color:#fff;background-repeat:no-repeat;background-position: center center;"></div>
+
+	<script>
+
+	var game = new Phaser.Game(830, 800, Phaser.AUTO, 'game', { init: init, preload: preload, create: create, update: update });
+
+	var doughnutData = null;
+	var planetaryBlurbText = null;
+	var socialBlurbText = null;
+	var innerCircleGroup = null;
+
+	var selectedBoundary = null;
+	var selectedFoundation = null;
+
+	var planetaryBoundaries = ['ClimateChange', 'OceanAcidification', 'ChemicalPollution', 'ChemicalPollution', 
+							   'Nitrogen', 'FreshWater', 'Land', 'Biodiversity', 'Air', 'OZone'];
+	var socialFoundations = ['Water', 'Food', 'Health', 'Education', 'Income', 'Peace', 'Political', 
+							 'Social', 'Gender', 'Housing', 'Networks', 'Energy'];
+
+	 function init()
+	 {
+        this.input.maxPointers = 1;
+        this.stage.disableVisibilityChange = true;
+        this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+        this.scale.pageAlignHorizontally = true;
+        this.scale.pageAlignVertically = true;
+
+        if(this.game.device.desktop)
+        {
+            this.scale.maxWidth = this.game.width;
+            this.scale.maxHeight = this.game.height;
+        }
+        else if (!this.game.device.desktop)
+        {
+            this.scale.forceOrientation(false, true); // Force portrait
+       	}
+	 }
+
+	function preload() 
+	{
+		game.stage.setBackgroundColor(0xFFFFFF);
+
+		game.load.json('doughnutData', 'json/doughnut.json');
+
+		for (var i = planetaryBoundaries.length - 1; i >= 0; i--) 
+		{
+			game.load.image(planetaryBoundaries[i], 'img/' + planetaryBoundaries[i] + '.png');
+		}
+
+		for (var i = socialFoundations.length - 1; i >= 0; i--) 
+		{
+			game.load.image(socialFoundations[i], 'img/' + socialFoundations[i] + '.png');
+		}
+
+		game.load.image('OuterRing', 'img/OuterRing.png');
+		game.load.image('InnerRing', 'img/InnerRing.png');
+		game.load.image('Overshoot', 'img/Overshoot.png');
+		game.load.image('Shortfall', 'img/Shortfall.png');
+		game.load.image('RingText', 'img/RingText.png');
+	}
+
+	function create() 
+	{
+		innerCircleGroup = game.add.group();
+		doughnutData = this.game.cache.getJSON('doughnutData');
+
+		// Create sprites for general assets (rings, etc.)
+		for (var i = doughnutData.general.length - 1; i >= 0; i--) 
+		{
+			var spriteData = doughnutData.general[i];
+			var newSprite = null;
+
+			if (spriteData.inner === "true") 
+				newSprite = innerCircleGroup.create(spriteData.x, 715-spriteData.y, spriteData.name);
+			else
+				newSprite = game.add.sprite(spriteData.x, 715-spriteData.y, spriteData.name);
+
+			newSprite.anchor.set(0, 1);
+			newSprite.sendToBack();
+			spriteData.sprite = newSprite;
+		}
+
+		// Create planetary boundary 'fins'
+		for (var i = doughnutData.planetary.length - 1; i >= 0; i--) 
+		{
+			var spriteData = doughnutData.planetary[i];
+			var newSprite = game.add.sprite(spriteData.x, 715-spriteData.y, spriteData.name);
+			newSprite.planetaryIndex = i;
+			newSprite.anchor.set(0, 1);
+			newSprite.sendToBack();
+
+			newSprite.inputEnabled = true;
+			newSprite.input.pixelPerfectOver = (spriteData.pixelPerfect === "true");
+			newSprite.input.pixelPerfectClick = newSprite.input.pixelPerfectOver;
+			newSprite.input.pixelPerfectAlpha = 1;
+            newSprite.events.onInputOver.add(onInputOverPlanetaryBoundary, this);
+            newSprite.events.onInputOut.add(onInputOutPlanetaryBoundary, this);
+            newSprite.events.onInputDown.add(onInputOverPlanetaryBoundary, this);
+
+            spriteData.sprite = newSprite;
+		}
+
+		// Create social foundation.. stuff
+		for (var i = doughnutData.social.length - 1; i >= 0; i--) 
+		{
+			var spriteData = doughnutData.social[i];
+			var newSprite = innerCircleGroup.create(spriteData.x, 715-spriteData.y, spriteData.name);
+			newSprite.socialIndex = i;
+			newSprite.anchor.set(0, 1);
+
+			newSprite.inputEnabled = true;
+			newSprite.input.pixelPerfectOver = true;
+			newSprite.input.pixelPerfectClick = newSprite.input.pixelPerfectOver;
+			newSprite.input.pixelPerfectAlpha = 1;
+            newSprite.events.onInputOver.add(onInputOverSocialFoundation, this);
+            newSprite.events.onInputOut.add(onInputOutSocialFoundation, this);
+            newSprite.events.onInputDown.add(onInputOverSocialFoundation, this);
+
+			spriteData.sprite = newSprite;
+		}
+
+        var planetaryBlurbTextStyle = 
+        {
+            font: '22px Arial', fill: '#ffffff', align: "center",
+            boundsAlignH: "center",  wordWrap: true, wordWrapWidth: 350
+        };
+
+		planetaryBlurbText = game.add.text(260, 230, '', planetaryBlurbTextStyle);
+		planetaryBlurbText.alpha = 0;
+
+        var socialBlurbTextStyle = 
+        {
+            font: '18px Arial', fill: '#000000', align: "center",
+            boundsAlignH: "center",  wordWrap: true, wordWrapWidth: 830, boundsAlignH: "center"
+        };
+
+		socialBlurbText = game.add.text(0, 725, '', socialBlurbTextStyle);
+		socialBlurbText.setTextBounds(0, 0, 830, 100);
+		socialBlurbText.alpha = 0;
+
+		doughnutData.general[2].sprite.bringToTop();
+		doughnutData.general[3].sprite.bringToTop();
+	}
+
+	function update() 
+	{
+	}
+
+	function onInputOverPlanetaryBoundary(sprite, pointer)
+	{
+		// Clean up selected elements if we're on mobile and aren't getting input out events
+		if (selectedBoundary != sprite && selectedBoundary !=null) onInputOutPlanetaryBoundary(selectedBoundary, null);
+		if (selectedFoundation != null) onInputOutSocialFoundation(selectedFoundation, null);
+		selectedBoundary = sprite;
+
+		for (var i = doughnutData.planetary.length - 1; i >= 0; i--) 
+		{
+			// Highlight this planetary boundary
+			if (i === sprite.planetaryIndex) 
+			{
+				game.add.tween(doughnutData.planetary[i].sprite).to( { alpha: 1 }, 250, Phaser.Easing.Linear.In, true);
+				var data = doughnutData.planetary[sprite.planetaryIndex];
+
+				if (data.boundary !== '') 
+				{
+					planetaryBlurbText.text = 
+						data.blurb + '\n\n' + 
+						'Planetary Boundary: ' + data.boundary + '\n\n' +
+						'Current Value: ' + data.current;
+				}
+				else
+				{
+					planetaryBlurbText.text = data.blurb;
+				}
+			}
+			else
+			{
+				// Alpha out other boundaries
+				game.add.tween(doughnutData.planetary[i].sprite).to( { alpha: 0.5 }, 250, Phaser.Easing.Linear.In, true);
+			}
+		}
+
+		// Fade OUT inner circle and fade IN planetry limit blurb text
+		game.add.tween(innerCircleGroup).to( { alpha: 0 }, 250, Phaser.Easing.Linear.In, true);
+		game.add.tween(planetaryBlurbText).to( { alpha: 1 }, 250, Phaser.Easing.Linear.In, true);
+	}
+
+	function onInputOutPlanetaryBoundary(sprite, pointer)
+	{
+		for (var i = doughnutData.planetary.length - 1; i >= 0; i--) 
+		{
+			// Make all boundaries fully visible again
+			game.add.tween(doughnutData.planetary[i].sprite).to( { alpha: 1 }, 250, Phaser.Easing.Linear.In, true);
+		}
+
+		// Fade IN inner circle and fade OUT planetry limit blurb text
+		game.add.tween(innerCircleGroup).to( { alpha: 1 }, 250, Phaser.Easing.Linear.In, true);
+		game.add.tween(planetaryBlurbText).to( { alpha: 0 }, 250, Phaser.Easing.Linear.In, true);
+
+		selectedBoundary = null;
+	}
+
+	function onInputOverSocialFoundation(sprite, pointer)
+	{
+		// Clean up selected elements if we're on mobile and aren't getting input out events
+		if (selectedBoundary != null) onInputOutPlanetaryBoundary(selectedBoundary, null);
+		if (selectedFoundation != sprite && selectedFoundation != null) onInputOutSocialFoundation(selectedFoundation, null);
+		selectedFoundation = sprite;
+
+		for (var i = doughnutData.social.length - 1; i >= 0; i--) 
+		{
+			// Highlight this social foundation
+			if (i === sprite.socialIndex) 
+			{
+				var data = doughnutData.social[sprite.socialIndex];
+
+				if (data.blurb2 !== '') 
+				{
+					socialBlurbText.text = 
+						'1) ' + data.blurb + ': ' + data.percentage + '% (' + data.year + ')\n' + 
+						'2) ' + data.blurb2 + ': ' + data.percentage2 + '% (' + data.year2 + ')';
+				}
+				else
+				{
+					socialBlurbText.text = data.blurb + ': ' + data.percentage + '% (' + data.year + ')';
+				}
+			}
+			else
+			{
+				// Alpha out other boundaries
+				game.add.tween(doughnutData.social[i].sprite).to( { alpha: 0.5 }, 250, Phaser.Easing.Linear.In, true);
+			}
+		}
+
+		for (var i = doughnutData.planetary.length - 1; i >= 0; i--) 
+		{
+			// Alpha out all planetary boundaries
+			game.add.tween(doughnutData.planetary[i].sprite).to( { alpha: 0.5 }, 250, Phaser.Easing.Linear.In, true);
+		}
+
+		// Fade IN social limit blurb text
+		game.add.tween(socialBlurbText).to( { alpha: 1 }, 250, Phaser.Easing.Linear.In, true);
+	}
+
+	function onInputOutSocialFoundation(sprite, pointer)
+	{
+		// Fade OUT social limit blurb text
+		game.add.tween(socialBlurbText).to( { alpha: 0 }, 250, Phaser.Easing.Linear.In, true);
+
+		for (var i = doughnutData.social.length - 1; i >= 0; i--) 
+		{
+			// Make all foundations fully visible again
+			game.add.tween(doughnutData.social[i].sprite).to( { alpha: 1 }, 250, Phaser.Easing.Linear.In, true);
+		}
+
+		for (var i = doughnutData.planetary.length - 1; i >= 0; i--) 
+		{
+			// Make all planetary boundaries fully visible again
+			game.add.tween(doughnutData.planetary[i].sprite).to( { alpha: 1 }, 250, Phaser.Easing.Linear.In, true);
+		}
+
+		selectedFoundation = null;
+	}
+
+	</script>
+
+	</body>
+</html>

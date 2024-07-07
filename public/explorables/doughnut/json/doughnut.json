@@ -1,0 +1,254 @@
+{
+	"planetary":
+	[
+		{
+			"name": "ClimateChange",
+			"blurb": "\nAtmospheric carbon dioxide concentration, parts per million (ppm)",
+			"boundary": "At most 350",
+			"current": "400 and rising (worsening)",
+			"x": "292.857",
+			"y": "543.571",
+			"pixelPerfect": "true"
+		},
+		{
+			"name": "OceanAcidification",
+			"blurb": "Average saturation of \n aragonite (calcium carbonate) \nat the ocean surface, as a percentage of pre-industrial levels",
+			"boundary": "At least 80% of pre-industrial levels",
+			"current": "Around 84% and falling (intensifying)",
+			"x": "501.860",
+			"y": "442.343",
+			"pixelPerfect": "true"
+		},
+		{
+			"name": "ChemicalPollution",
+			"blurb": "\n\n\n\n    No global control variable yet defined",
+			"boundary": "",
+			"current": "",
+			"x": "618.486",
+			"y": "270.245",
+			"pixelPerfect": "false"
+		},
+		{
+			"name": "Nitrogen",
+			"blurb": "Phosphorus and reactive \nNitrogen applied to land as \nfertiliser, millions of tons per year",
+			"boundary": "6.2 (Phosphorus), 62 (Nitrogen)",
+			"current": "Around 14 and rising (Phosphorus), Around 150 million and rising (Nitrogen)",
+			"x": "567.875",
+			"y": "34.643",
+			"pixelPerfect": "true"
+		},
+		{
+			"name": "FreshWater",
+			"blurb": "\nBlue water consumption, cubic kilometres per year",
+			"boundary": "At most 4,000km³ per year",
+			"current": "Around 2,600km³ per year and rising (intensifying)",
+			"x": "418.366",
+			"y": "8.162",
+			"pixelPerfect": "true"
+		},
+		{
+			"name": "Land",
+			"blurb": "\nArea of forested land as a proportion of forest-covered land prior to human alteration",
+			"boundary": "At least 75%",
+			"current": "62% and falling (intensifying)",
+			"x": "214.952",
+			"y": "5.928",
+			"pixelPerfect": "true"
+		},
+		{
+			"name": "Biodiversity",
+			"blurb": "\nRate of species extinction \nper million species per year",
+			"boundary": "At most 10",
+			"current": "Around 100-1,000 and rising (worsening)",
+			"x": "24.827",
+			"y": "22.021",
+			"pixelPerfect": "true"
+		},
+		{
+			"name": "Air",
+			"blurb": "\n\n\n\n    No global control variable yet defined",
+			"boundary": "",
+			"current": "",
+			"x": "20.740",
+			"y": "264.390",
+			"pixelPerfect": "false"
+		},
+		{
+			"name": "OZone",
+			"blurb": "\nConcentration of ozone \nin the stratosphere, in Dobson Units (DU)",
+			"boundary": "At least 275",
+			"current": "283 and rising (improving)",
+			"x": "87.428",
+			"y": "455.942",
+			"pixelPerfect": "true"
+		}
+	],
+	"social":
+	[
+		{
+			"name": "Water",
+			"blurb": "Population without access to improved drinking water",
+			"blurb2": "Population without access to improved sanitation",
+			"percentage": "9",
+			"year": "2015",
+			"percentage2": "32",
+			"year2": "2015",
+			"x": "355.694",
+			"y": "340.169"
+		},
+		{
+			"name": "Food",
+			"blurb": "Population undernourished",
+			"blurb2": "",
+			"percentage": "11",
+			"year": "2014-16",
+			"percentage2": "",
+			"year2": "",
+			"x": "421.064",
+			"y": "340.901"
+		},
+		{
+			"name": "Health",
+			"blurb": "Population in countries with under-five mortality rate exceeding 25 per 1,000 live births",
+			"blurb2": "Population in countries with life expectancy at birth of less than 70 years",
+			"percentage": "46",
+			"year": "2015",
+			"percentage2": "39",
+			"year2": "2013",
+			"x": "424.894",
+			"y": "340.481"
+		},
+		{
+			"name": "Education",
+			"blurb": "Adult population (aged 15+) who are illiterate",
+			"blurb2": "Children aged 12-15 out of school",
+			"percentage": "15",
+			"year": "2013",
+			"percentage2": "17",
+			"year2": "2013",
+			"x": "426.429",
+			"y": "335.179"
+		},
+		{
+			"name": "Income",
+			"blurb": "Population living on less than the international poverty limit of $3.10 a day",
+			"blurb2": "Proportion of young people (aged 15-24) seeking but not able to find work",
+			"percentage": "29",
+			"year": "2012",
+			"percentage2": "13",
+			"year2": "2014",
+			"x": "427.143",
+			"y": "269.455"
+		},
+		{
+			"name": "Peace",
+			"blurb": "Population in countries scoring 50 or less out of 100 in the Corruption Perceptions Index",
+			"blurb2": "Population in countries with a homicide rate of 10 or more per 10,000",
+			"percentage": "85",
+			"year": "2014",
+			"percentage2": "13",
+			"year2": "2008-13",
+			"x": "424.769",
+			"y": "220.444"
+		},
+		{
+			"name": "Political",
+			"blurb": "Population in countries scoring 0.5 or less out of 1.0 in the Voice and Accountability Index",
+			"blurb2": "",
+			"percentage": "52",
+			"year": "2013",
+			"percentage2": "",
+			"year2": "",
+			"x": "422.121",
+			"y": "201.709"
+		},
+		{
+			"name": "Social",
+			"blurb": "Population living in countries with a Palma ratio of 2 or more (the ratio of the income share of the top 10% of people to that of the bottom 40%)",
+			"blurb2": "",
+			"percentage": "39",
+			"year": "1995-2012",
+			"percentage2": "",
+			"year2": "",
+			"x": "356.782",
+			"y": "202.042"
+		},
+		{
+			"name": "Gender",
+			"blurb": "Representation gap between women and men in national parliaments",
+			"blurb2": "Worldwide earnings gap between women and men",
+			"percentage": "56",
+			"year": "2014",
+			"percentage2": "23",
+			"year2": "2009",
+			"x": "306.705",
+			"y": "220.714"
+		},
+		{
+			"name": "Housing",
+			"blurb": "Global urban population living in slum housing in developing countries",
+			"blurb2": "",
+			"percentage": "24",
+			"year": "2012",
+			"percentage2": "",
+			"year2": "",
+			"x": "287.618",
+			"y": "270.025"
+		},
+		{
+			"name": "Networks",
+			"blurb": "Population stating that they are without someone to count on for help in times of trouble",
+			"blurb2": "Population without access to the internet",
+			"percentage": "24",
+			"year": "2015",
+			"percentage2": "57",
+			"year2": "2015",
+			"x": "287.826",
+			"y": "335.371"
+		},
+		{
+			"name": "Energy",
+			"blurb": "Population lacking access to electricity",
+			"blurb2": "Population lacking access to cooking facilities",
+			"percentage": "17",
+			"year": "2013",
+			"percentage2": "38",
+			"year2": "2013",
+			"x": "306.696",
+			"y": "338.149"
+		}
+	],
+	"general":
+	[
+		{
+			"name": "OuterRing",
+			"x": "194.388",
+			"y": "107.724",
+			"inner": "false"
+		},
+		{
+			"name": "InnerRing",
+			"x": "194.388",
+			"y": "107.724",
+			"inner": "true"
+		},
+		{
+			"name": "Overshoot",
+			"x": "612.500",
+			"y": "440.500",
+			"inner": "false"
+		},
+		{
+			"name": "Shortfall",
+			"x": "422.500",
+			"y": "328.500",
+			"inner": "true"
+		},
+		{
+			"name": "RingText",
+			"x": "334.143",
+			"y": "435.091",
+			"inner": "true"
+		}
+	]
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{% if title %}{{ title }} | Karn Bianco{% else %}Karn Bianco{% endif %}</title>
+		<meta name="description" content="{{ description or metadata.description }}">
+
+		{#- Social #}
+		<meta property="og:title" content="{% if title %}{{ title }} | Karn Bianco{% else %}Karn Bianco{% endif %}">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Karn Bianco">
+		<meta property="og:description" content="{% if description %}{{ description }}{% endif %}">
+		<meta property="og:image" content="{% if summaryImage %}{% image_url summaryImage, [640], page %}{% else %}/img/default-summary-image.png{% endif %}">
+		<meta property="og:url" content="https://www.karnbianco.co.uk{{ page.url }}">
+
+		{#- Main Atom and JSON feeds included by default #}
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+
+		{#- CSS bundle #}
+		{%- css %}{% include "public/css/index.css" %}{% endcss %}
+		{%- css %}{% include "node_modules/photoswipe/dist/photoswipe.css" %}{% endcss %}
+		<style>{% getBundle "css" %}</style>
+
+		{#- Javascript bundle #}
+		{%- js %}{% include "node_modules/masonry-layout/dist/masonry.pkgd.min.js" %}{% endjs %}
+		{%- js %}{% include "public/js/global.js" %}{% endjs %}
+		<script>{% getBundle "js" %}</script>
+
+    {#- Favicon #}
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1493fb">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+      <div class="nav-item home-nav-item">
+        <a href="/" class="home-icon">
+          <img src="/favicon-32x32.png" class="icon">
+        </a>
+        <a href="/">
+          </img><span>{{ metadata.title }}</span>
+        </a>
+      </div>
+
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+				{%- for entry in collections.all | eleventyNavigation %}
+					<li class="nav-item">
+            <a href="{{ entry.url }}"{% if entry.url in page.url %} aria-current="page"{% endif %}>
+              {% icon entry.icon, '{ "class": "icon" }' %}
+              <span>{{ entry.title }}</span>
+            </a>
+          </li>
+				{%- endfor %}
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			{{ content | safe }}
+		</main>
+
+    <hr>
+		<footer>
+			<p>© {% currentYear %} Karn Bianco </p>
+      <p><a href="/feed/">{% icon "feather:rss", '{ "class": "rss-icon" }'%}Subscribe via RSS</a></p>
+		</footer>
+	</body>
+</html>

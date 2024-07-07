@@ -1,0 +1,19 @@
+<div class="card-grid">
+{% for post in postslist | reverse %}
+
+  <div class="card">
+    <a href="{{ post.url }}">{%- image post.data.summaryImage, "", [340], "", post %}</a>
+    <div class="card-container">
+      <a href="{{ post.url }}"class="card-title">{{ post.data.title }}</a>
+
+      <ul class="post-metadata">
+        <li>📅 <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLL yyyy") }}</time></li>
+        <li>⌚ {{ post.content | readingTime }} read</li>
+      </ul>
+
+      <p class="card-description">{{ post.data.description }}</p>
+    </div>
+  </div>
+
+{% endfor %}
+</div>

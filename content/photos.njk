@@ -1,0 +1,14 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Photos
+  order: 3
+  icon: feather:camera
+title: Photos
+description: "A small selection of the many photos I've taken over the years. I tend to focus on landscapes, natural wonders, plants, and animals."
+---
+<h1>{% icon "feather:camera", { "class": "icon-lg" } %} {{title}}</h1>
+<p>{{description}}</p>
+
+{% set photoslist = collections.photos %}
+{% include "photosgrid.njk" %}

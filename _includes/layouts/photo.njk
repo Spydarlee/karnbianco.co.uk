@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+---
+
+<h1>{% icon "feather:camera", { "class": "icon-lg" } %} {{title}}</h1>
+<p class="post-description">{{ description }}</p>
+
+<ul class="post-metadata">
+	<li>📅 <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate('LLLL yyyy') }}</time></li>
+
+  {% if location  %}
+	<li>🌍 {{location}}</li>
+  {% endif %}
+</ul>
+
+{{ content | safe }}
+
+{% gallery page.fileSlug %}
+  {% for i in range(0, imageCount) -%}
+    {% galleryImage imagePrefix + i + imageSuffix %}
+  {%- endfor %}
+{% endgallery %}
+
+{%- if collections.photos %}
+{%- set previousPost = collections.photos | getPreviousCollectionItem %}
+{%- set nextPost = collections.photos | getNextCollectionItem %}
+{%- if nextPost or previousPost %}
+<ul class="links-nextprev">
+  {%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+  {%- if previousPost and nextPost %}</br>{% endif %}
+  {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+</ul>
+{%- endif %}
+{%- endif %}
+
