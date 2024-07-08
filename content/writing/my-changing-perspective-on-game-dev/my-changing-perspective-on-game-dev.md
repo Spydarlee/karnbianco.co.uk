@@ -48,11 +48,11 @@ There is more to life than work, even the privileged work of making games. But i
 
 Even if you enter the industry, as I did, with a laser-focus on making games above all else, priorities can change. For me, I found myself increasingly drawn to environmental, social and political activism. Big issues that extended beyond just _my_ success and _my_ happiness, which is ultimately (I realised in hindsight) what I had been focusing on throughout University especially.
 
-Relationships and family commitments can, of course, also be big priority shifters. But it could be anything, or nothing! Just a desire for a healthier balance of the different elements of your life. You might even go through phases â€“ the thrill of starting or finishing a project can be a particularly attractive time to “just do a bit more before I go home” but balance is really key if you want to be in it for the long haul.
+Relationships and family commitments can, of course, also be big priority shifters. But it could be anything, or nothing! Just a desire for a healthier balance of the different elements of your life. You might even go through phases — the thrill of starting or finishing a project can be a particularly attractive time to “just do a bit more before I go home” but balance is really key if you want to be in it for the long haul.
 
 I would advise just being mindful of how you spend your time and prioritise self-care and care for those around you as seriously as you might prioritize productivity at work and your career development. Game development culture (or indeed most corporate culture) doesn't always lend itself to encouraging that way of thinking, so it might be something you have to make a conscious effort to practise.
 
-And that's just to talk of those who have a choice in the matter. There are plenty of people â€“ those on low incomes, those who have families to support or other commitments, etc. â€“ for whom being the model employee that, as proof of passion and commitment, is always doing overtime or working on side projects, just isn't feasible. And I hope the industry is starting to recognise how many brilliant people we lose when our model of success remains so narrow and alienating.
+And that's just to talk of those who have a choice in the matter. There are plenty of people — those on low incomes, those who have families to support or other commitments, etc. — for whom being the model employee that, as proof of passion and commitment, is always doing overtime or working on side projects, just isn't feasible. And I hope the industry is starting to recognise how many brilliant people we lose when our model of success remains so narrow and alienating.
 
 ![Itoshima](itoshima.jpg)
 

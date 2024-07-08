@@ -1,10 +1,10 @@
 <div class="card-grid">
 {% for photo in photoslist | reverse %}
 
-  <div class="card">
-    <a href="{{ photo.url }}">{%- image photo.data.summaryImage, "", [340], "", photo %}</a>
+  <a href="{{ photo.url }}" class="card">
+    {%- image photo.data.summaryImage, "", [340], "", photo %}
     <div class="card-container">
-      <a href="{{ photo.url }}"class="card-title">{{ photo.data.title }}</a>
+      <span class="card-title">{{ photo.data.title }}</span>
 
       <ul class="post-metadata">
         <li>📅 <time datetime="{{ photo.date | htmlDateString }}">{{ photo.date | readableDate("LLL yyyy") }}</time></li>
@@ -12,7 +12,7 @@
 
       <p class="card-description">{{ photo.data.description }}</p>
     </div>
-  </div>
+  </a>
 
 {% endfor %}
 </div>
