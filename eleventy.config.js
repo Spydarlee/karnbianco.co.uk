@@ -5,6 +5,7 @@ const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginIcons = require('eleventy-plugin-icons');
 const pluginReadingTime = require('eleventy-plugin-reading-time');
+const pluginTOC = require('eleventy-plugin-toc')
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 const pluginImages = require("./eleventy.config.images.js");
@@ -29,7 +30,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginIcons, {
     sources: [{ name: 'feather', path: 'node_modules/feather-icons/dist/icons' }],
   });
-  eleventyConfig.addPlugin(pluginReadingTime);
+  eleventyConfig.addPlugin(pluginReadingTime, );
+  eleventyConfig.addPlugin(pluginTOC);
 
 	// Official plugins
 	eleventyConfig.addPlugin(pluginRss);
@@ -41,7 +43,6 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginBundle);
 
 	// Filters and custom collections
-
 	eleventyConfig.addCollection("everything", function (collectionApi) {
 		return collectionApi.getFilteredByGlob(["content/writing/**/*.md", "content/projects/**/*.md", "content/photos/**/*.md"]);
 	});

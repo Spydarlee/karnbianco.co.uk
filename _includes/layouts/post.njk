@@ -25,7 +25,15 @@ layout: layouts/base.njk
 {%- image summaryImage, "", [720] %}
 {% endif %}
 
-{{ content | safe }}
+{% if includeTOC %}
+<div class="table-of-contents">
+  <h2>Table of Contents</h2>
+  {{ content | toc | safe }}
+</div>
+{% endif %}
+<article>
+  {{ content | safe }}
+</article>
 
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}

@@ -9,6 +9,7 @@
   --color-primary: #2d5c88;
   --color-secondary: #1493fb;
 
+	--color-gray-10: #f6f6f6;
 	--color-gray-20: #e0e0e0;
 	--color-gray-50: #C0C0C0;
 	--color-gray-90: #333;
@@ -299,7 +300,6 @@ header {
 	align-self: center;
 }
 
-/* Tags list */
 .post-metadata {
 	display: inline-flex;
 	flex-wrap: wrap;
@@ -542,4 +542,22 @@ footer {
   justify-content: space-between;
   padding: 0em 1em 1em 1em;
   font-size: var(--text-size-detail);
+}
+
+/* Table of Contents */
+
+.table-of-contents {
+  margin: 1em 0em;
+  padding: 0.75em;
+  padding-bottom: 0.5em;
+  background-color: var(--color-gray-10);
+
+  h2 {
+    font-size: 1em;
+    margin-bottom: 0.75em;
+  }
+}
+
+article {
+  margin-top: 1em;
 }
