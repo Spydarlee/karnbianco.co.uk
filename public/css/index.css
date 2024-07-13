@@ -364,25 +364,23 @@ blockquote {
 blockquote:before {
   color: var(--color-secondary);
   content: open-quote;
-  font-size: 3em;
+  font-size: 4em;
   line-height: 0.1em;
   vertical-align: -0.4em;
 }
 
 blockquote:after {
-  color: var(--color-secondary);
+  display: block;
+  height: 0px;
+  visibility: hidden;
   content: close-quote;
-  font-size: 3em;
-  line-height: 0.1em;
-  vertical-align: -0.4em;
 }
 
 blockquote p {
   margin-top: 1.5em
 }
 
-blockquote p:first-child,
-blockquote p:last-child {
+blockquote p:first-child {
   display: inline;
 }
 
@@ -560,4 +558,19 @@ footer {
 
 article {
   margin-top: 1em;
+}
+
+/* Markdown Alerts */
+
+.markdown-alert {
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+.markdown-alert-info {
+  background: #E6F0FC;
+}
+
+.markdown-alert-title {
+  font-weight: bold;
 }

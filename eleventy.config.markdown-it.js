@@ -3,6 +3,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 const markdownItEleventyImg = require("markdown-it-eleventy-img");
 const markdownItImplicitFigures = require('markdown-it-image-figures');
 const markdownItFootnotes = require('markdown-it-footnote');
+const markdownItAlerts = require('markdown-it-github-alerts');
 
 // Customize Markdown library plugins
 module.exports = function(eleventyConfig) {
@@ -42,6 +43,13 @@ module.exports = function(eleventyConfig) {
 
     // Support footnotes with [^1] syntax
     mdLib.use(markdownItFootnotes);
+
+    // Support callouts / alerts for blockquotes
+    // that start with [!info] syntax
+    mdLib.use(markdownItAlerts, {
+      markers: '*'
+    });
+
     mdLib.renderer.rules.footnote_block_open = () => (
       '<hr>' +
       '<h2 class="mt-3">Footnotes & References</h2>\n' +
