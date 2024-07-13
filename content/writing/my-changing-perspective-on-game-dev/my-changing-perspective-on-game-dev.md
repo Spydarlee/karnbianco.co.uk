@@ -5,6 +5,7 @@ summaryImage: banner.jpg
 tags:
   - games
 date: 2018-03-22
+includeTOC: true
 ---
 Six and a half years ago, while in my first proper games industry job as an intern at Rare, I wrote about [how to break into the games industry](/writing/how-to-break-into-the-games-industry/) based on what (seemed to have) worked for me. The gist of my advice was: be really passionate about what you do, create lots of stuff (especially in your spare time), go to university (probably), and get your name out there with a website, portfolio, etc.
 
