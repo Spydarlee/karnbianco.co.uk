@@ -15,6 +15,7 @@
 	--color-gray-90: #333;
 
 	--background-color: #fff;
+	--alert-bg-color: #E6F0FC;
 
 	--text-color: var(--color-gray-90);
 	--text-color-link: var(--text-color);
@@ -27,11 +28,13 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
+		--color-gray-10: #222222;
 		--color-gray-20: #e0e0e0;
 		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
+		--color-gray-90: #eae8e8;
 
-		--background-color: #15202b;
+		--background-color: #121212;
+		--alert-bg-color: #202831;
 	}
 }
 
@@ -549,6 +552,7 @@ footer {
   padding: 0.75em;
   padding-bottom: 0.5em;
   background-color: var(--color-gray-10);
+  border-radius: 0.25em;
 
   h2 {
     font-size: 1em;
@@ -568,7 +572,7 @@ article {
 }
 
 .markdown-alert-info {
-  background: #E6F0FC;
+  background-color: var(--alert-bg-color);
 }
 
 .markdown-alert-title {
