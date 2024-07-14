@@ -26,28 +26,28 @@ To give a concrete example: back when I was still making games full-time, I work
 
 In a traditional game, it's trivial to map player input onto an in-game action (e.g. "if a player presses the 'X' button, kick the ball") but what about physical actions? How do we detect a person's leg? What *is* a leg? What about different leg shapes and sizes? Is that a human leg or a table leg? Is it a left leg or right left? And so on.
 
-![Kinect motion sensor references](kinect-motion-references.jpg "Recognizing human body poses with the Kinect Motion sensor [^2]")
+![Kinect motion sensor references](kinect-motion-references.jpg "[Recognizing human body poses with the Kinect Motion sensor](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/BodyPartRecognition.pdf)")
 
-It would have been impractical to manually program in all possible answers to these sorts of questions, so machine learning algorithms were used and provided with recordings of many different people performing actions in many different scenarios in order to create a statistical model that could help determine with *some* degree of confidence that "yes, the player just kicked their leg". [^3]
+It would have been impractical to manually program in all possible answers to these sorts of questions, so machine learning algorithms were used and provided with recordings of many different people performing actions in many different scenarios in order to create a statistical model that could help determine with *some* degree of confidence that "yes, the player just kicked their leg". [^2] [^3]
 
-### Deep Learning and Neural Networks
+### Deep Learning and Artificial Neural Networks
 
 Artificial neural networks are, in essence, pattern recognition machines. They're inspired by (but quite distinct from [^4]) biological brains, and fall under a subset of machine learning known as *deep learning* (where deep = structured in layers).
 
 Most neural networks rely on *supervised* learning, which means we humans give them not only input data, but also desired outputs to compare against while they're "learning". Inputs (which could be text, images, video, audio, etc.) get broken down and turned into numerical values which can then be mathematically manipulated as they travel through the network. [^5]
 
-The network is configured by many *parameters* which determine how data gets transformed as it passes through. The goal is to move the system towards being able to make more accurate predictions. It's a bit like a game of "hot and cold". We get "warmer" when a particular network configuration gets us closer to our desired output, and "colder" when it moves us farther away (introduces more errors).
+The network is configured by many *parameters* which determine how data gets transformed as it passes through. The goal is to move the system towards being able to make more accurate predictions. It's a bit like a game of "hot and cold". We get "warmer" when a particular network configuration gets us closer to our desired output, and "colder" when it moves us farther away (introduces more errors). [^6]
 
-![Neural Network visualization](neural-network.jpg "Neural Network visualization from the Neural Networks and Deep Learning: Crash Course AI video series [^6]")
+![Neural Network visualization](neural-network.jpg "Neural Network visualization from the [Crash Course AI](https://www.youtube.com/playlist?list=PL8dPuuaLjXtO65LeD2p4_Sb5XQ51par_b) video series")
 
-Let's say we want to build a neural network "AI" that can recognise cats. We begin by providing input data from our extensive personal collection of cat photos. For its first run, the neural network assigns random values to all parameters and tries to find a cat in a provided image. It fails, and the network spits out an error (also a number). No problem. The parameters are tweaked [^7] and we go again. And again. And again. Until we've reduced that output error as much as possible.
+Let's say we want to build a neural network "AI" that can recognise cats. We begin by providing input data from our extensive personal collection of cat photos. For its first run, the neural network assigns random values to all parameters and tries to find a cat in a provided image. It fails, and the network spits out an error (also a number). No problem. The parameters are tweaked [^7] and we go again. And again. And again. Until we've reduced that output error as much as possible. 
 
 This is what it means to "train" an "AI": feeding data into the system and then continuously tweaking its parameters to get closer and closer to a desired output. The more parameters in a system, the more complex the tasks it can perform.
 
 ### Transformers
-Transformers (not those ones) are a special type of neural network that were first described by engineers at Google in 2017. [^8] The power of transformers arises from two key features: improved context tracking and parallelisation.
+Transformers (not those ones) are a special type of neural network that were first described by engineers at Google in 2017. [^8] The power of transformers arises from two key features: improved context tracking and parallelisation. 
 
-Most other neural networks and "AI" models operate on inputs, such as text, linearly, from start to finish. This limits both their maximum performance, and their ability to keep track of context over large "distances".
+Most other neural networks and "AI" models operate on inputs, such as text, linearly, from start to finish. This limits both their maximum performance, and their ability to keep track of context over large "distances". 
 
 As a slightly crude analogy, imagine you're reading the final chapter of a book and the author makes reference to something from the first chapter. If you've been reading sequentially (as humans tend to do) you might not be able to remember exactly what was said. The "distance" is too great. If, however, you were able to read every page in the book *at the same time* (less common for humans) it would still be fresh in your mind, and you would have the full context.
 
@@ -63,9 +63,9 @@ Large language models (LLMs) make use of the transformer architecture to process
 
 OpenAI's GPT-3 was trained on 45TB of compressed data, down to "570GB after filtering". That's 1300 or 500 times the size of Wikipedia, for filtered and unfiltered sources respectively. This translated to about 175 *billion* parameters, and required a huge amount computing power and energy for training. [^10]
 
-GPT-3.5 and GPT-4, which power the current iteration of ChatGPT, are even larger. The huge scope of training data is a key part of why ChatGPT can respond to such a wide range of prompts and topics, and why it's captured so much attention since launch. But the basic underlying operating principles of neural networks - as pattern recognition machines and probability maximisers - remains intact.
+GPT-3.5 and GPT-4, which power the current iteration of ChatGPT, are even larger. The huge scope of training data is a key part of why ChatGPT can respond to such a wide range of prompts and topics, and why it's captured so much attention since launch. But the basic underlying operating principles of neural networks — as pattern recognition machines and probability maximisers — remains intact.
 
-Generative "AI" is technically impressive, but it's not *magic*. The fact that we do not always fully understand everything these models are doing "under the good" does not mean that *anything* could be happening. The "black box" at the heart of complex neural networks is simply the result of "AI" breaking down input data into patterns that make little or no *intuitive* sense to humans; we wouldn't approach these problems in the same way because we're not machines. The risk is not that "AI" might be conscious, but rather that we don't know if what it's generating is utter rubbish or not (and neither does the "AI" model).
+Generative "AI" is certainly technically impressive, but it's not *magic*. The fact that we do not always fully understand everything these models are doing "under the hood" does not mean that *anything* could be happening. The "black box" at the heart of complex artificial neural networks is simply the result of "AI" breaking down input data into patterns that make little or no *intuitive* sense to humans; we wouldn't approach these problems in the same way because we're not machines. The risk is not that "AI" might be secretly conscious, but rather that we don't know if what it's generating is utter rubbish or not (and neither does the "AI", as well discuss below). 
 
 --
 
@@ -74,11 +74,11 @@ All of the "AI" models discussed so far are examples of artificial *limited* int
 ---
 ## Is "AI" really intelligent? (What is intelligence?)
 
-In March 2023, Microsoft published [Sparks of Artificial General Intelligence](https://arxiv.org/abs/2303.12712) [^11], a widely-covered paper which claimed that GPT-4 was showing early (albeit incomplete) signs of artificial general intelligence (AGI). To claim that something is intelligent, however, requires a definition of intelligence, and the authors' first attempt was.. troubled.
+In March 2023, Microsoft published [Sparks of Artificial General Intelligence](https://arxiv.org/abs/2303.12712), [^11] a widely-covered paper which claimed that GPT-4 was showing early (albeit incomplete) signs of artificial general intelligence (AGI). To claim that something is intelligent, however, requires a definition of intelligence, and the authors' first attempt was.. troubled.
 
-The paper initially cited a source that called on Charles Murray's [The Bell Curve](https://en.wikipedia.org/wiki/The_Bell_Curve) [^12] for a definition of intelligence. Perhaps you're familiar with this infamous book for it's controversial claims — to put it mildly — that race is linked to intelligence, and that people are more likely to end up living in poverty if they have low IQs, among other gems.
+The paper initially cited a source that called on Charles Murray's [The Bell Curve](https://en.wikipedia.org/wiki/The_Bell_Curve) [^12] for a definition of intelligence. Perhaps you're familiar with this infamous book for it's controversial claims — to put it mildly — that race is linked to intelligence, and that people are more likely to end up living in poverty because they have low IQs, among other gems.
 
-> Virtually all proposed theories relating to AGI and its development rely on simplified, quantifiable representations of intelligence. This leads AGI researchers to gravitate towards metrics like IQ, along with all the historical baggage that comes with the use of those metrics.
+> Virtually all proposed theories relating to AGI and its development rely on simplified, quantifiable representations of intelligence. This leads AGI researchers to gravitate towards metrics like IQ, along with all the historical baggage that comes with the use of those metrics. 
 
 <cite>— [AGI Researchers Stop Quoting White Supremacists Challenge (Impossible)](https://medium.com/@collegehill/agi-researchers-stop-quoting-white-supremacists-challenge-impossible-d1002469d572)[^13]</cite>
 
@@ -87,7 +87,7 @@ The authors updated the article to clarify that, of course, they don't agree wit
 This isn't an isolated example; simplistic and harmful understandings of intelligence are rife in "AI", but these notions do not go entirely unchallenged.
 ### Stochastic parrots
 
-[Emily Bender](https://en.wikipedia.org/wiki/Emily_M._Bender) is a computational linguist and outspoken "AI" critic. [Timnit Gebru](https://en.wikipedia.org/wiki/Timnit_Gebru) is an engineer and former "AI" ethicist at Google (before she was fired). Together with several other co-authors they wrote a [paper](https://dl.acm.org/doi/10.1145/3442188.3445922) considering the dangers of ever-expanding large language models (LLMs), while also introducing the concept of "stochastic parrots".
+[Emily Bender](https://en.wikipedia.org/wiki/Emily_M._Bender) is a computational linguist and outspoken "AI" critic. [Timnit Gebru](https://en.wikipedia.org/wiki/Timnit_Gebru) is an engineer and former "AI" ethicist at Google (before she was fired). Together with several other co-authors they wrote a [paper](https://dl.acm.org/doi/10.1145/3442188.3445922) considering the dangers of ever-expanding large language models (LLMs), while also introducing the concept of "stochastic parrots". 
 
 > Contrary to how it may seem when we observe its output, an LM is a system for haphazardly stitching together sequences of linguistic forms it has observed in its vast training data, according to probabilistic information about how they combine, but without any reference to meaning: a stochastic parrot.
 
@@ -124,20 +124,20 @@ One downside of training large language models on vast input data sourced from a
 
 Precarious workers in low-income countries far away from the reality of tech companies in Silicon Valley were paid tiny salaries to do often traumatizing work that only an empathetic human being could do. All in the name of propping up a technology that sells itself on doing things that humans *can't* do.
 
-It's a pattern we see repeated again and again. Whether it's "self-driving cars" that still need human drivers as "backups" [^18], or gig economy workers on zero hour contracts fighting algorithmic authoritarianism in order to make ends meet [^19],  there's a pretty clear ideological pursuit afoot to hide, obscure and devalue human labour to the detriment of working people, and the benefit of capital.
+It's a pattern we see repeated again and again. Whether it's "self-driving cars" that still need human drivers as "backups", [^18] or gig economy workers on zero hour contracts fighting algorithmic authoritarianism in order to make ends meet, [^19]  there's a not-so-subtle ideological pursuit afoot to hide, obscure and devalue human labour to the detriment of working people, and the benefit of capital.
 
 ### Continuing colonisation
-One example of machine learning that many of us have been using and benefitting from for years is language translation, via tools such as [Google Translate](https://translate.google.com/). Both text translation and automatic speech recognition have come on leaps and bounds in recent years, but where did the data come from to train these models?
+One example of machine learning that many of us have probably been using and benefitting from for years is language translation, via tools such as [Google Translate](https://translate.google.com/). Both text translation and automatic speech recognition have come on leaps and bounds in recent years, but where did the data come from to train these models?
 
 That's a question the team behind [Papa Reo](https://papareo.nz/#kaupapa) — a multilingual indigenous language revitalisation project — asked when OpenAI released its speech recognition system, [Whisper](https://openai.com/blog/whisper/), complete with support for the te reo Māori language. Also, whose permission did they seek to "create a derived work from that data and then open source the derivation?" [^20] There was no good answer.
 
-Preservation of indigenous languages is a crucial task, but one that needs indigenous leadership. What it *doesn't*' need is Big Tech companies like OpenAI (and Amazon) swanning in, non-transparently sucking up data, and then profiting from the results. Instead, Papa Reo is developing its own small-scale machine learning tools, trained on its own - ethically sourced - datasets, in active partnership with local communities who retain their data rights throughout.
+Preservation of indigenous languages is a crucial task, but one that needs indigenous leadership. What it *doesn't*' need is Big Tech companies like OpenAI (and Amazon, and Google) swanning in, non-transparently sucking up data, and then profiting from the results. Instead, Papa Reo is developing its own small-scale machine learning tools, trained on its own — ethically sourced — datasets, in active partnership with local communities who retain their data rights throughout.
 
 > In theory the open source movement aims to democratise technology like machine learning, which ultimately should be making tech more accessible and usable for minority groups. In practice, only those who have internet, a computer, the education, and other resources ubiquitous among Western countries and certain demographics are able to take advantage of the open source movement. Many indigenous and marginalised communities don't have these resources or ability to benefit from open source because they are continually oppressed by systemic racism, governments, colonialism, and capitalism.
 
 <cite>— [OpenAI's Whisper is another case study in Colonisation](https://blog.papareo.nz/whisper-is-another-case-study-in-colonisation/) [^20]</cite>
 
-Even seemingly positive uses of "AI" can create harmful impacts when undermined by unequal power dynamics. When the benefits of "AI" are centralized in unaccountable tech companies whose stated goals are to build bigger and bigger and increasingly general purpose tools, this is inevitably going to end up being at odds with the interests of the communities they purport to be serving.
+Even seemingly positive uses of "AI" can create harmful impacts when undermined by unequal power dynamics. When "AI" is centralized in unaccountable tech companies whose stated goals are to build bigger and bigger and increasingly general purpose tools (to sell to as big an audience as possible), this is inevitably going to end up being at odds with the interests of the marginalized communities in particular.
 
 ### Eroding digital autonomy
 Should tech companies be free to train their generative "AI" models on any and all data, even copyrighted materials? Writing on the [Creative Commons blog](https://creativecommons.org/2023/02/17/fair-use-training-generative-ai/), Stephen Wolfson argues that, yes, training "AI" models should constitute "fair use", just like when human artists take "inspiration" from their fellow artists. The alternative, he argues, would be a mess of copyright lawsuits that could set a negative precedent for "future technologies." [^21]
@@ -151,39 +151,39 @@ Should tech companies be free to train their generative "AI" models on any and a
 Beyond legal arguments there is, I think, a much simpler ethical case to be made based on *consent*. Why shouldn't we all have the right to grant or deny permission for our work, our art, our data, our likeness, to be used by companies for *any* purpose? The main argument against respecting consent seems to rely on the idea that these new "AI" technologies are *so* transformative that we just need to get over ourselves. And yet I am once again reminded that "the social benefits [of "AI"] are still speculative while the harms have been empirically demonstrated". [^23]
 
 ### Automating away joy
-The promise of automation has long been that it would take over the drudgery of life, the dangerous work, the gross work, the work nobody wants to do, leaving us all with more free time to spend as we will. So why is that the things people love to do and which give our lives meaning — like writing and creating art — are being outsourced to machines, while so many humans continue to languish in meaningless, underpaid, exploitative, [bullshit jobs](https://davidgraeber.org/books/bullshit-jobs/)?
+The promise of automation has long been that it would take over the drudgery of life, the dangerous work, the gross work, the work nobody wants to do, leaving us all with more free time to spend as we will. So why is it that the things people love to do and which give our lives meaning — like writing and creating art — are being outsourced to machines, while so many humans continue to languish in meaningless, underpaid, exploitative, [bullshit jobs](https://davidgraeber.org/books/bullshit-jobs/)?
 
 > If we surrender these things too, even by an inch, then what is left? If we retreat from the notion that there is something ineffable about human nature that cannot be appropriated and automated by machines, we demean the very concept of personhood. I can't think of anything more antihuman.
 
 <cite>— Alex Roddie, [Generative AI will not make you a better writer](https://www.alexroddie.com/2023/09/generative-ai-will-not-make-you-a-better-writer-it-will-destroy-creative-writing-as-a-way-of-expressing-the-human-experience/) [^24]</cite>
 
-Unfortunately, tech companies and their oligarchs do not countenance such fanciful ideas about art, or even humanity (more on that later). As we have seen time and time again, it is not in the interest of tech companies to make people's lives better, except at best as an unintended side effect. Their interests are profit and growth, like all for-profit companies. Are these really the people and incentives we want in charge of making decisions about our futures?
+Unfortunately, tech companies and their oligarchs do not countenance such fanciful ideas about art, or even humanity (more on that later). As we have seen time and time again, it is not in the interest of tech companies to make people's lives better, except at best as an unintended side effect. Their interests are profit and growth, like all for-profit companies. Are these really the companies and incentives we want in charge of making decisions about our futures?
 
-Every time we use generative "AI" to create something that we *could* have worked with a human to create instead, are we not limiting opportunities for human thriving? For collaboration? For fulfilment? For joy? We can be sure that corporations who care first and foremost about their bottom lines will happily use generative "AI" to replace artists and churn out low-cost, soulless "art" because they have every incentive to. That doesn't mean the rest of us need to follow suit. We could choose to keep that which makes life worth living for ourselves.
+Every time we use generative "AI" to create something that we *could* have worked with a human to create, are we not limiting opportunities for human thriving? For collaboration? For fulfilment? For joy? We can be sure that corporations who care first and foremost about their bottom lines will happily use generative "AI" to replace artists and churn out low-cost, soulless "art" because they have every incentive to. That doesn't mean the rest of us need to follow suit. We could choose to keep that which makes life worth living for ourselves.
 
 ### "AI"-powered states
 A few short days after the election of the Labour Party to government in the UK this year, the [Tony Blair Institute for Global Change](https://www.institute.global/) released a paper boldly making the case for "reimagining the state" by leveraging, you guessed it, "AI". [^25]
 
-The paper is littered with excitement about potential boosts to productivity, efficiency, and growth. It presents two distinct ways to take advantage of these "improvements": they *could* be used to help workers in their current jobs and reduce overwhelm, *or* they could be used to cut a load of jobs entirely.
+The paper is littered with excitement about potential boosts to productivity, efficiency, and growth. It presents two distinct ways to take advantage of these "improvements": they *could* be used to help public sector workers in their current jobs and reduce overwhelm and overwork, *or* they could be used to cut a load of jobs entirely:
 
 > The government could choose to shrink the UK's public-sector workforce and bank the fiscal savings. This would involve reducing the workforce by a sixth over the course of a decade, equivalent to slimming the previously growing public sector by half a million roles this parliamentary term and another half a million during the next term.
 
 <cite>— [The Economic Case for Reimagining the State](https://www.institute.global/insights/economic-prosperity/the-economic-case-for-reimagining-the-state)[^25]</cite>
 
-Whether or not we believe the estimated levels of impact "AI" could actually have once we strip the hype away, the political project is clear: neoliberalism, baby! Shrink the state, reduce government spending, rollout private sector technologies and dependencies "across the entire public sector", and grow private markets. Is this a "reimagined state"? Or more of the same, turbocharged by tech?
+Whether or not we believe the projected impacts of "AI" are accurate once we strip the hype away, the political project is clear: neoliberalism, baby! Shrink the state, reduce government spending, rollout private sector technologies and dependencies "across the entire public sector", and grow private markets. Is this a "reimagined state"? Or more of the same, turbocharged by tech?
 
 This is already happening, with or without "AI". In 2021, the Australian government was ordered to pay a huge settlement after its automated welfare system caused massive harm, and was even linked to multiple suicides. [^26] In 2020, UK councils were forced to abandon their own algorithmic welfare decision tools as a result of bias and a lack of transparency. [^27]
 
 As anyone who has ever been on benefits (✋) can tell you, welfare systems are dehumanizing and bureaucratic enough at the *best* of times. The ideological drive to make these systems more "efficient" makes them a prime target for "AI" — not just as support tools, but as actual "decision makers". The fact that algorithms have no concept of morality also gives the state a shield to hide behind when people's benefits are cut or denied. It's not personal, it's not inhumane, it's just the most efficient solution! The computers said so, and they're neutral and rational!
 
-This is just the tip of the iceberg: [biometric surveillance](https://www.accessnow.org/campaign/ban-biometric-surveillance/) [^28], [predictive policing](https://edri.org/wp-content/uploads/2022/05/Prohibit-predictive-and-profiling-AI-systems-in-law-enforcement-and-criminal-justice.pdf)  [^29]; the list of current and potential state abuses that can be enabled and expanded by "AI" is all-but endless.
+This is just the tip of the iceberg: [biometric surveillance](https://www.accessnow.org/campaign/ban-biometric-surveillance/), [^28] [predictive policing](https://edri.org/wp-content/uploads/2022/05/Prohibit-predictive-and-profiling-AI-systems-in-law-enforcement-and-criminal-justice.pdf) , [^29] systematizing bias; the list of current and potential state abuses that can be enabled and expanded by "AI" is all-but endless.
 
 ### Turbocharging genocide
 Project Nimbus is a collaboration between Google, Amazon, and the State of Israel. Signed in 2021, this huge $1.2bn deal ensures that Israel have access to cutting-edge cloud computing services, machine learning, and other "AI" tools. [^30]
 
 Israel has a long history of testing new military technologies, techniques and weapons on the Palestinian people, and then profiting by selling their expertise and "battle-tested" technologies to the rest of the world. [^31] They were one of the world's top 10 arms exporters between 2019 and 2023. [^32]
 
-Whether it's "data-driven" predictions about who might pose a threat to the state, lethal autonomous weapons systems such as "robo-snipers", facial recognition and biometric surveillance to enact apartheid [^33], or the 'Where's Daddy?' system which "helps target suspected Hamas militants when they're at home with their families" [^34], the proliferation of "AI" has only accelerated since October 7th.
+Whether it's "data-driven" predictions about who might pose a threat to the state, lethal autonomous weapons systems such as "robo-snipers", facial recognition and biometric surveillance to enact apartheid, [^33] or the 'Where's Daddy?' system which "helps target suspected Hamas militants when they're at home with their families", [^34] the proliferation of "AI" has only accelerated since October 7th.
 
 > Beyond such systems' lack of accuracy or human verification, a more existential concern is how their use is fundamentally at odds with human rights, and the inherent human dignity from which those rights derive. This is demonstrated by the reality that Israel's AI targeting systems are working just as intended; as [the IDF](https://www.theguardian.com/world/2023/oct/10/right-now-it-is-one-day-at-a-time-life-on-israels-frontline-with-gaza) has said, "right now we're focused on what causes maximum damage."
 
@@ -193,11 +193,11 @@ We don't need to speculate about hypothetical, Terminator-esque futures where th
 
 ---
 ## What are the environmental impacts of "AI"?
-In its paper arguing for a "reimagined state" where "AI" is deployed "across the entire public sector" in the UK, the [Tony Blair Institute](https://www.institute.global/) makes precisely zero references to the environment, and only a single reference to "climate"... in a footnote with no bearing on their main thesis. It does, however, reference "GDP" a total of 82 times, and "growth" 89 times. [^25]
+In its paper arguing for a "reimagined state" where "AI" is deployed "across the entire public sector" in the UK, the [Tony Blair Institute](https://www.institute.global/) makes precisely zero references to the environment, and only a single reference to "climate"... in a footnote with no bearing on its main thesis. It does, however, reference "GDP" a total of 82 times, and "growth" 89 times. [^25]
 
-These omissions exist in spite of an acknowledgement (and celebration) of the fact that the UK is home to the world's third-largest compute capacity, hosting a total of 118 data centres, sitting behind the United States (1,204) and China (437). [^35]
+These omissions exist in spite of an acknowledgement (and celebration) of the fact that the UK is home to the world's third-largest compute capacity, hosting a total of 118 data centres, coming in behind the United States (1,204) and China (437). [^35]
 
-As "AI" models — generative models like ChatGPT in particular — have grown in size and complexity, so have their associated material and energy costs. So big are these costs, in fact, that they have caused Google's emissions to rise by a whopping 50%, and Microsoft's by 30%, putting their net zero ambitions (which were already questionable at best due to their reliance on carbon credits) in jeopardy. [^36] The International Energy Agency predicts that electricity demand for "AI" could double by 2026, as data centres come to represent an increasingly large proportion of energy consumption worldwide. [^37]
+As "AI" models — generative models like ChatGPT in particular — have grown in size and complexity, so have their associated material and energy costs. So big are these costs, in fact, that they have caused Google's emissions to rise by a whopping 50%, and Microsoft's by 30%, putting their net zero ambitions (which were already questionable at best due to their reliance on carbon offsetting) in jeopardy. [^36] The International Energy Agency predicts that electricity demand for "AI" could double by 2026, as data centres come to represent an increasingly large proportion of energy consumption worldwide. [^37]
 
 Tech companies like to justify these impacts with the logic that, yes, "AI" may be pouring fuel on the climate crisis fire now, but it's *also* going to help us solve our ecological problems! [Microsoft's AI For Good Lab](https://www.microsoft.com/en-us/research/group/ai-for-good-research-lab/), for instance, waxes lyrical that "[AI may hold a key to the preservation of the Amazon rainforest](https://news.microsoft.com/source/latam/features/ai/amazon-ai-rainforest-deforestation/?lang=en&form=M402JX&OCID=lock-con2)". [^38] This is greenwashing, pure and simple. Not because there are no potentially useful applications of machine learning to ecological issues, but because it provides a cover for all the other ways Microsoft is pushing "AI" on us which have little, if any, social benefit, but plenty of environmental costs.
 
@@ -213,7 +213,7 @@ The ecological impacts of "AI" go deeper than the direct material and energy cos
 
 ![Sam Altman doesn't like degrowth](sam-altman-tweets.png "OpenAI CEO, Sam Altman on x.com - [2022](https://x.com/sama/status/1599668808285028353), [2024](https://x.com/sama/status/1786849158105796675)")
 
-In [Moore's Law for Everything](https://moores.samaltman.com/) [^40], OpenAI CEO Sam Altman insists that "a stable economic system requires two components: growth and inclusivity." He proceeds to lay out his vision for a future in which the deep inequalities caused by capitalism are solved by increasing the size of the economic pie and making everyone an "equity owner", fostering "capitalism for everyone". He chucks in a few progressive policy ideas — such as a wealth tax, and move towards taxing capital over labour — but situates these firmly within a new flavour of capitalism.
+In [Moore's Law for Everything](https://moores.samaltman.com/), [^40] OpenAI CEO Sam Altman insists that "a stable economic system requires two components: growth and inclusivity." He proceeds to lay out his vision for a future in which the deep inequalities caused by capitalism are solved by increasing the size of the economic pie and making everyone an "equity owner", fostering "capitalism for everyone". He chucks in a few progressive policy ideas — such as a wealth tax, and move towards taxing capital over labour — but situates these firmly within a new flavour of capitalism.
 
 > Capitalism for Everyone: The best way to improve capitalism is to enable everyone to benefit from it directly as an equity owner. This is not a new idea, but it will be newly feasible as AI grows more powerful, because there will be dramatically more wealth to go around.
 
@@ -221,7 +221,7 @@ In [Moore's Law for Everything](https://moores.samaltman.com/) [^40], OpenAI CEO
 
 ![It was capitalism all along](always-has-been.jpg)
 
-Altman predicts that "AI" will ensure that "growth will be extremely rapid", and expects countries could achieve 50% GDP growth in short order. Unfortunately for Sam (and the rest of us) "there is no empirical evidence that absolute decoupling" of GDP growth from resource and energy usage can be achieved, and certainly not at the pace required to keep global heating under 1.5°C or 2°C of warming. [^41] If we are serious about addressing our ecological crises then we need post-capitalist, post-growth economic paradigms — [degrowth](https://en.wikipedia.org/wiki/Degrowth), [wellbeing economics](https://weall.org/what-is-wellbeing-economy), [Doughnut Economics](https://doughnuteconomics.org/about-doughnut-economics), etc. — *not* the proliferation of technologies designed to turbo-charge growth.
+Altman predicts that "AI" will ensure that "growth will be extremely rapid", and expects countries could achieve 50% GDP growth in short order. Unfortunately for Sam (and the rest of us) "there is no empirical evidence that absolute decoupling" of GDP growth from resource and energy usage can be achieved, and certainly not at the pace required to keep global heating under 1.5°C or 2°C of warming. [^41] If we are serious about addressing our ecological crises then we need post-capitalist, post-growth economic paradigms — [degrowth](https://en.wikipedia.org/wiki/Degrowth), [wellbeing economics](https://weall.org/what-is-wellbeing-economy), [Doughnut Economics](https://doughnuteconomics.org/about-doughnut-economics), etc. — *not* the proliferation of technologies designed to turbo-charge growth at all costs.
 
 But being staunchly pro-growth isn't the only questionable ideological thread that binds billionaires, tech leaders, and many other "AI" proponents together...
 
@@ -248,7 +248,7 @@ Why is that so many leading figures in "AI" worry that it carries the risk of ca
 - **Effective Altruism**: An attempt to maximise "positive impact" in the world through dispassionate and rational evaluation
 - **Longtermism**: An overriding "ethic" that centres the ushering in of a future, posthuman species to maximise value creation across the universe.
 
-This might all sound like little more than science fiction, but these are deeply held convictions for many influential people — Elon Mask, Peter Thiel, Sam Altman, Vitalik Buterin, Sam Bankman-Fried, and so on. AGI is a central pillar in many of these ideologies because it is expected to hasten human development exponentially. There are just a few small problems with all this, though..
+This might all sound like little more than science fiction, but these are deeply held convictions for many influential people — Elon Mask, Peter Thiel, Sam Altman, Vitalik Buterin, Sam Bankman-Fried, and more. AGI is a central pillar in many of these ideologies because it is expected to hasten human development exponentially. There are just a few small problems with all this, though..
 
 ### Uh-oh, eugenics-o
 
@@ -256,7 +256,7 @@ This might all sound like little more than science fiction, but these are deeply
 
 <cite>—[The TESCREAL bundle: Eugenics and the promise of utopia through artificial general intelligence](https://firstmonday.org/ojs/index.php/fm/article/view/13636/11599) [^44]</cite>
 
-This plot twist may not come as that much of a surprise considering we've already explored the reliance on "IQ" when questioning whether or not "AI" is really intelligent. Both those short-term questions about intelligence, and these long-term visions of posthumans, assume a very narrow, linear scale of intelligence which can be neatly mapped onto non-human entities, whether they're "AI" or some as-yet-unknown posthuman species. [^45]
+This plot twist may not come as that much of a surprise considering we've already explored the reliance on "IQ" when questioning whether or not "AI" is really intelligent. Both those short-term questions about intelligence, and these long-term visions of posthumanism, assume a very narrow, linear scale of intelligence which can be neatly mapped onto non-human entities, whether they're "AI" or some as-yet-unknown posthuman species. [^45]
 
 Longtermists don't like to associate with the "eugenics" brand much anymore, but their rhetoric is mostly identical. Not only are they ranking humans by intelligence, but they want to create a "superior human stock" through technological advancements, and eventually transcend humanity entirely. This "second wave" of eugenics drops the focus on "negative eugenics" like forced sterilization, in favour of "positive eugenics" like technological and genetic enhancements, but the end goal is the same: a (narrowly-defined) "superior human" race.
 
@@ -270,13 +270,13 @@ Aside from some people wanting to live out their science fiction fantasies, why 
 
 This "totalist utilitarianism" postulates that, if humanity continues to develop and spread across the universe, the number of people (not necessarily human anymore, but digital beings living in simulations) who are alive in the far future will far exceed the few billion alive today. Our prime moral directive, then, should be to do everything we possibly can to ensure those people's futures. This includes pursuing the development of AGI at all costs - not doing so would be a *moral* failure. We also shouldn't worry so much about short-term, small-scale issues like poverty or the climate crisis, which are but mere blips on the cosmic timeline when viewed from a vantage point millions or billions of years into the future.
 
-> The staggering environmental costs of training and performing inference on [general purpose AI] models of this size have been documented by a number of researchers. But from the TESCREAL perspective, this cost should not be of much concern, because the impending climate catastrophe does not pose an existential risk to humanity, while stopping work on building “value-aligned” AGI could.
+> The staggering environmental costs of training and performing inference on [general purpose AI] models of this size have been documented by a number of researchers. But from the TESCREAL perspective, this cost should not be of much concern, because the impending climate catastrophe does not pose an existential risk to humanity, while stopping work on building "value-aligned" AGI could.
 
 <cite>—[The TESCREAL bundle: Eugenics and the promise of utopia through artificial general intelligence](https://firstmonday.org/ojs/index.php/fm/article/view/13636/11599) [^44]</cite>
 
 This justification for ignoring people's needs — especially marginalized and oppressed peoples — while claiming that doing so is actually the morally *superior* choice, is of course very appealing to misanthropic, self-involved techno-chauvinists. It's also a twisted bastardization of genuinely valuable ideas like the [Haudenosaunee Confederacy's Seventh Generation](https://www.haudenosauneeconfederacy.com/values/) principle of considering how our actions today will impact our descendants over the next seven generations. Not the next seven *billion years*, which is all but impossible to envisage anyway.
 
-The propagation of these ideas doesn't imply a shadowy cabal of conspirators meeting in darkened, smoky rooms to plot against the rest of us. They're a perfectly logical extrapolation of the productivity-fetishizing, growth-obsessed, western-centric myth of the linear arc of human progress. Manifest Destiny written across the stars. Led, of course, by the brightest, most brilliant, most visionary leaders among us - the tech billionaires and their sycophants.
+The propagation of these ideas doesn't imply a shadowy cabal of conspirators meeting in darkened, smoky rooms to plot against the rest of us. They're a perfectly logical extrapolation of the productivity-fetishizing, growth-obsessed, western-centric, colonial myth of the linear arc of human progress. Manifest Destiny written across the stars. Led, of course, by the brightest, most brilliant, most visionary leaders among us - the tech billionaires and their sycophants.
 
 ---
 ## Is "AI" really inevitable?
@@ -296,7 +296,7 @@ When McQuillan set out to write a book about "AI" his original title was "AI for
 > I was trying to understand what was going on with AI, and went through a series of negative revelations going: Wait! This is exactly like neoliberalism, and this is, in its own way, entirely recapitulating a sort of [Friedrich] Hayek idea of what markets are supposed to do: optimal distillation of all available information.
 
 <cite>— Dan McQuillan, [Why We Must Resist AI](https://techwontsave.us/episode/158_why_we_must_resist_ai_w_dan_mcquillan)[^48]</cite>
-### Rage against the machines
+### Rage against the machines 
 
 > We must reject en masse the AI proposed by capitalism until such time as we can revolutionize the technology under the control of working people, where it can be rebuilt from the ground up in line with our needs rather than those of investment firms.
 
@@ -310,24 +310,24 @@ In his book, [Blood in the Machine](https://www.hachettebookgroup.com/titles/bri
 
 <cite>— [A new tech rebellion is taking shape. We can learn a lot from the Luddites](https://www.fastcompany.com/90949827/what-the-luddites-can-teach-us-about-standing-up-to-big-tech) [^51]</cite>
 
-Technology is never inevitable, it is the result of human choices. We *can* make different choices. We can learn from the luddites. We can create social movements that resist "AI" in all its harmful forms (which is most of them). We can fight back.
+Technology is never inevitable, it is the result of human choices. We *can* make different choices. We can learn from the Luddites. We can create social movements that resist "AI" in all its harmful forms (which is most of them). We can fight back.
 
 ---
 ## So, where do we go from here?
-If you've read everything up until now — first of all, wow, thank you! Didn't have much on today, huh? — you might be thinking that this all a touch dramatic. Does any of this really have any bearing on regular people who just want to use ChatGPT to reply to a few emails, or have Midjourney create images of their favourite cartoon characters in romantic embrace? Well, yes, I think it does.
+If you've read everything up until now — first of all, wow, thank you! Didn't have much on today, huh? — you might be thinking that this all a touch dramatic. Does any of this really have any bearing on regular people who just want to use ChatGPT to reply to a few emails, or have Midjourney create images of their favourite cartoon characters in a romantic embrace? Well, yes, I think it does.
 
-We've explored the dangerous ideologies that permeate and underpin these technologies. We've explored (some of) the social, political and ecological harms that they cause. We are connected to all of these whenever we use technology from the Big Tech companies, whether we want to be or not. ChatGPT is made by OpenAI. OpenAI's lead financial backer is Microsoft, who get a cut of OpenAI's profits. Microsoft supply the Israeli state with technology that is being used to commit a genocide in Palestine. Microsoft earn money from ads shown alongside Bing's "AI"-powered search. [^52] These tangled webs cannot be neatly unpicked and separated.
+We've explored the dangerous ideologies that permeate and underpin these technologies. We've explored (some of) the social, political and ecological harms that they cause. We are connected to all of these whenever we use technology from the Big Tech companies, whether we want to be or not. ChatGPT is made by OpenAI. OpenAI's lead financial backer is Microsoft, who get a cut of OpenAI's profits. Microsoft supply the Israeli state with "AI" technology that is being used to commit a genocide in Palestine. Microsoft earn money from ads shown alongside Bing's "AI"-powered search. [^52] These and many other tangled webs cannot be neatly unpicked.
 
 At least for now, the most "impressive" large-scale "AI" models — including ChatGPT and other generative "AI" — can *only* be trained and operated by Big Tech companies, because those are the only companies with access to sufficiently vast computational resources. [^39] This ensures that these tools are, by their very nature, designed to centralize wealth, power, and influence into the hands of a tiny minority who don't have our best interests at heart. They can also only function by consuming huge quantities of data without consent. I don't think there is much of an ethical case to be made for continuing to use these mainstream "AI" tools *at all* in their current form. We could just... not.
 
 ![Get in loser](get-in-loser.jpg)
 
-But simply opting out isn't enough (and not everyone will be given the choice), we also need to get active. We can support campaigns which are already challenging the most egregious harms caused by "AI" such as [No Tech For Apartheid](https://www.notechforapartheid.com/) which is a campaign against Project Nimbus [^53], and [Ban Biometric Surveillance](https://www.accessnow.org/campaign/ban-biometric-surveillance/) which is an open letter calling for an end to *all* invasive surveillance. We can also support artists when they call for [boycotts of generative "AI"](https://www.vice.com/en/article/ake9me/artists-are-revolt-against-ai-art-on-artstation), and we can support tech workers in their efforts to [unionise the Big Tech companies](https://www.alphabetworkersunion.org/) and agitate for change from within. We can push back against companies who insist of inserting "AI" features into *everything*, from video conferencing tools like [Zoom](https://www.zoom.com/en/ai-assistant/) to collaboration tools like [Slack](https://slack.com/intl/en-gb/features/ai), and beyond, which nobody asked for.
-
+But simply opting out isn't enough (and not everyone will be given the choice), we also need to get active. We can support campaigns which are already challenging the most egregious harms caused by "AI" such as [No Tech For Apartheid](https://www.notechforapartheid.com/) which is a campaign against Project Nimbus, [^53] and [Ban Biometric Surveillance](https://www.accessnow.org/campaign/ban-biometric-surveillance/) which is an open letter calling for an end to *all* invasive surveillance. We can also support artists when they call for [boycotts of generative "AI"](https://www.vice.com/en/article/ake9me/artists-are-revolt-against-ai-art-on-artstation), and we can support tech workers in their efforts to [unionise the Big Tech companies](https://www.alphabetworkersunion.org/) and agitate for change from within. We can push back against companies who insist of inserting "AI" features into *everything*, from video conferencing tools like [Zoom](https://www.zoom.com/en/ai-assistant/) to collaboration tools like [Slack](https://slack.com/intl/en-gb/features/ai), which nobody asked for.
+ 
 We can also begin to shift and expand the narrative in every conversation we have about "AI" with friends, family, co-workers. We can challenge the techno-solutionism, the unsubstantiated hype, the disempowering claims of inevitability. We can get specific about what "AI" really is, and what it's not. We can highlight the real dangers, and not the sci-fi ones. We can approach "AI" (and all technologies) with a healthy scepticism *and* curiosity, ensuring that we're asking the most critical questions *(hey, like the title of this piece!)*. We could choose to spend less time asking "what can 'AI' do *for* us?" and more time asking "what is 'AI' doing *to* us (and the rest of the planet)?"
 
 > AI itself amplifies the climate crisis through emissions, the expropriation of water and energy resources, the legitimation of green tech solutionism, and through its colonial universalism. What's missing is a social movement to resist AI that has a positive vision of more-than-human solidarities.
->
+> 
 > We need a prefigurative technopolitics; iterative interventions in both material operations and social relations that align with the world we want to live in. We need a movement that is Luddite in its commitment to put down machinery hurtful to the commonality, and convivial in its pursuit of a lost cybernetics that can balance autonomy and coordination.
 
 <cite>— [The political intervention in AI that we need right now...](https://www.danmcquillan.org/the-political-intervention-in-ai-that-we-need-right-now.html), Dan McQuillan [^16]</cite>
@@ -350,7 +350,7 @@ We need a revolution of imagination. You in?
 [^14]: [On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜](https://dl.acm.org/doi/10.1145/3442188.3445922), Emily Bender, Timnit Gebru, et. al (March 2021)
 [^15]: [You Are Not a Parrot](https://nymag.com/intelligencer/article/ai-artificial-intelligence-chatbots-emily-m-bender.html), New York Magazine (March 2023)
 [^16]: [The political intervention in AI that we need right now...](https://www.danmcquillan.org/the-political-intervention-in-ai-that-we-need-right-now.html), Dan McQuillan
-[^17]: [OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic](https://time.com/6247678/openai-chatgpt-kenya-workers), Time
+[^17]: [OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic](https://time.com/6247678/openai-chatgpt-kenya-workers), Time 
 [^18]: [Self-Driving Cars ‘May Require Human Element In Long Term](https://www.silicon.co.uk/e-innovation/artificial-intelligence/gm-cruise-av-human-475236#), Silicon (Sep 2022)
 [^19]: [My experience working in the gig economy](https://www.redpepper.org.uk/economics-unions-work/work-trade-unions/gig-economy-deliveroo-drivers-workers-rights-flexibility-workplace-organising-unions/), Red Pepper (Mar 2023)
 [^20]: [OpenAI's Whisper is another case study in Colonisation](https://blog.papareo.nz/whisper-is-another-case-study-in-colonisation/), Keoni Mahelona, Gianna Leoni, Suzanne Duncan, Miles Thompson (Jan 2023)
