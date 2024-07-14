@@ -14,7 +14,7 @@ description: "Hi, I'm Karn (they/them) and I'm a jack of many trades. Programmer
 
 ![A photo of me, Karn, on top of a snowy mountain with a cloud inversion behind me.](karn-bianco.jpg)
 
-🍩 I'm the **Digital Platform Lead** at [Doughnut Economics Action Lab (DEAL)](https://doughnuteconomics.org/) - an org dedicated to fostering post-capitalist economies that are regenerative and distributive by design.
+🍩 I'm the **Digital Platform Lead** at [Doughnut Economics Action Lab (DEAL)](https://doughnuteconomics.org/) - an org dedicated to fostering post-capitalist economies that are regenerative and distributive by design. (The views expressed on this website are solely my own, though).
 
 🎮 I'm a **game developer**. I worked in the games industry for several years before switching gears to focus on the climate crisis. [Check out the games I've worked on.](/tags/games/)
 
