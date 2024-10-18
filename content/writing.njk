@@ -5,10 +5,9 @@ eleventyNavigation:
   order: 2
   icon: feather:edit-2
 title: Writing
-description: "Making sense of the world through writing. Or, trying to. Mostly essays and other long-form pieces, including professional work."
 ---
 <h1>{% icon "feather:edit-2", { "class": "icon-lg" } %}{{title}}</h1>
-<p>{{description}}</p>
+<p>{{ metadata.blurbs.writing }}</p>
 
 {% set postslist = collections.posts %}
 {% include "postsgrid.njk" %}

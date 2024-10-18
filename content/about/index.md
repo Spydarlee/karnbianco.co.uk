@@ -6,7 +6,7 @@ eleventyNavigation:
   icon: feather:user
 summaryImage: karn-bianco.jpg
 title: About Me
-description: "Hi, I'm Karn (they/them) and I'm a jack of many trades. Programmer, writer, amateur photographer, game developer, designer, organiser, dog lover, etc."
+description: "Hi, I'm Karn (they/them) and I'm a jack of various trades: programmer, writer, amateur photographer, game developer, designer, organiser, dog lover, etc."
 ---
 
 <h1>{% icon "feather:user", { "class": "icon-lg" } %} {{title}}</h1>
@@ -20,11 +20,11 @@ description: "Hi, I'm Karn (they/them) and I'm a jack of many trades. Programmer
 
 👩‍💻 I'm a **web designer & developer**. In my current job I am responsible for UI/UX design, product design, and full-stack development for a community platform.
 
-✊ I'm an **organiser**. In 2018 I helped found the [Game Workers branch of the IWGB](https://www.gameworkers.co.uk/) – the UK's first trade union dedicated to workers in the games industry.
-
 ✍ I'm a **writer**. I write about the climate crisis, technology, politics, and more, both professionally and generally to make sense of the world. [Explore my writing](/writing).
 
-👩‍💻 I'm an **open source tinkerer**. I release many of [my own projects](/projects) under open licenses, and I like to [contribute to open source projects](https://github.com/Spydarlee) when I have time.
+✊ I'm an **organiser**. In 2018 I helped found the [Game Workers branch of the IWGB](https://www.gameworkers.co.uk/) – the UK's first trade union dedicated to workers in the games industry.
+
+👩‍💻 I'm an **open source tinkerer**. I release many of [my own projects](/projects) under open licenses, and I try to [contribute to open source projects](https://github.com/Spydarlee) when I can.
 
 🚵‍♀️ I'm an **outdoorsy person** (when I'm not indoors, which is.. also often). I love hiking, cycling, cycle touring, camping, wild swimming, all the good stuff.
 

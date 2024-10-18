@@ -72,8 +72,11 @@
 
     <hr>
 		<footer>
-			<p>© {% currentYear %} Karn Bianco </p>
-      <p><a href="/feed/">{% icon "feather:rss", '{ "class": "rss-icon" }'%}Subscribe via RSS</a></p>
+      {% include "newsletterform.njk" %}
+      <div class="footer-details">
+			  <p>© {% currentYear %} Karn Bianco </p>
+        <p><a href="/feed/">{% icon "feather:rss", '{ "class": "rss-icon" }'%}Subscribe via RSS</a></p>
+      </div>
 		</footer>
 	</body>
 </html>
