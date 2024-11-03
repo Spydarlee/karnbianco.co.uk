@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>Scotland COVID Wastewater Levels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../.././css/chartjs.css">
+  </head>
+
+  <body>
+    <div class="main">
+      <figure>
+        <img class="static-image no-js" src="static_chart.png" alt="A line chart showing COVID wastewater levels in blue, with the 2024 summer spike highlighted in red." width="100%" height="auto">
+
+        <canvas id="chart-canvas"></canvas>
+        <figcaption>Seven day average COVID wastewater levels in Scotland between 2020 and 2024, tracking million gene copies (Mgc) per person per day. (<a href="https://scotland.shinyapps.io/phs-respiratory-covid-19/" target="_blank">Source</a>)</figcaption>
+      </figure>
+    </div>
+
+    <script src='../.././js/d3.min.js'></script>
+    <script type="module" src="../.././js/chart.umd.js"></script>
+    <script type="module" src="./main.js"></script>
+
+  </body>
+</html>
+

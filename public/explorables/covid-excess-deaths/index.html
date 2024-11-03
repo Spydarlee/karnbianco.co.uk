@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>Excess COVID Deaths</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../.././css/chartjs.css">
+  </head>
+
+  <body>
+    <div class="main">
+      <figure>
+        <img class="static-image no-js" src="static_chart.png" alt="A line chart showing a range of estimated excess deaths, as well as confirmed deaths." width="100%" height="auto">
+
+        <canvas id="chart-canvas"></canvas>
+        <figcaption>Estimated cumulative worldwide excess deaths due to COVID-19. Based on data from the <a href="https://covid19.who.int/" target="_blank">World Health Organisation</a> (2024) and <a href="https://github.com/TheEconomist/covid-19-the-economist-global-excess-deaths-model?tab=readme-ov-file" target="_blank">The Economist</a> (2024), processed by <a href="https://ourworldindata.org/grapher/excess-deaths-cumulative-economist-single-entity?facet=none" target="_blank">Our World In Data</a>.</figcaption>
+      </figure>
+    </div>
+
+    <script src='../.././js/d3.min.js'></script>
+    <script type="module" src="../.././js/chart.umd.js"></script>
+    <script type="module" src="./main.js"></script>
+
+  </body>
+</html>
+

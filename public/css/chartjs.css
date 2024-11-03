@@ -1,0 +1,39 @@
+body {
+  background: white;
+}
+
+figure {
+  margin: 1rem 0 0 0;
+}
+
+figcaption {
+  margin: 1rem 0 1rem 0;
+  font-size: 1rem;
+  font-family: -apple-system, system-ui, sans-serif;
+  text-align: center;
+
+  a {
+    color: black;
+  }
+}
+
+.static-image {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .static-image {
+    display: block;
+  }
+  canvas {
+    display: none !important;
+  }
+}
+
+.no-js {
+  display: block !important;
+}
+
+a:hover {
+  color: #1493fb;
+}
