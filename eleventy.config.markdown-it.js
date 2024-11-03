@@ -27,7 +27,11 @@ module.exports = function(eleventyConfig) {
         widths: [720],
         urlPath: "/img/",
         outputDir: path.join("_site", "img"),
-        formats: ["avif", "webp", "jpeg"]
+        formats: ["auto"],
+        sharpOptions: {
+          animated: true,
+          limitInputPixels: false
+        },
       },
       globalAttributes: {
         class: "markdown-image",

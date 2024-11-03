@@ -19,6 +19,7 @@
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 
 		{#- CSS bundle #}
+    {%- css %}{% include "public/css/base.css" %}{% endcss %}
 		{%- css %}{% include "public/css/index.css" %}{% endcss %}
 		{%- css %}{% include "node_modules/photoswipe/dist/photoswipe.css" %}{% endcss %}
 		<style>{% getBundle "css" %}</style>

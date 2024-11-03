@@ -1,4 +1,5 @@
 const { DateTime } = require("luxon");
+const { parse } = require("csv-parse/sync");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
@@ -19,6 +20,8 @@ module.exports = function(eleventyConfig) {
 		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css",
 		"./node_modules/photoswipe/dist/photoswipe-lightbox.esm.min.js": "/js/photoswipe-lightbox.esm.min.js",
 		"./node_modules/photoswipe/dist/photoswipe.esm.min.js": "/js/photoswipe.esm.min.js",
+    "./node_modules/d3/dist/d3.min.js": "/js/d3.min.js",
+    "./node_modules/chart.js/dist/chart.umd.js": "/js/chart.umd.js",
 	});
 
 	// Watch content images for the image pipeline.
@@ -98,6 +101,17 @@ module.exports = function(eleventyConfig) {
 	// https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
 
 	// eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+
+  eleventyConfig.addDataExtension("csv", (contents) => {
+    const records = parse(contents, {
+      columns: true,
+      skip_empty_lines: true,
+      relax_column_count: true,
+      delimiter: ";",
+      trim: true,
+    });
+    return records;
+  });
 
 	return {
 		// Control which files Eleventy will process
