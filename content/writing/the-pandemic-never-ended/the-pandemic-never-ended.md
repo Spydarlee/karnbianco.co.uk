@@ -8,6 +8,7 @@ includeTOC: "true"
 ---
 
 > [!info] Who is this essay for? Everyone! But especially those who are:
+>
 > 1. Interested in a summary of recent science about COVID-19.
 > 2. No longer taking regular precautions (e.g. wearing a mask).
 > 3. Curious about how COVID might fit into broader discussions about disability justice and collective liberation.
@@ -82,7 +83,7 @@ In fact, if you've had several COVID infections (including asymptomatic infectio
 
 ![A looping gif of David from the TV show Schitt's Creek saying "mmm, that's a hard pass"](hard-pass.gif)
 
-Long COVID is the umbrella term used to refer to a wide variety of post-infection impacts. Estimates put the number of people living with Long COVID globally in the millions, with as many as 400 million people — 6% to 7% of adults —  having experienced symptoms at some point. Despite its prevalence, people suffering from Long COVID often face stigma from both their communities and medical providers, including doubts about whether Long COVID is even "real". [^31]
+Long COVID is the umbrella term used to refer to a wide variety of post-infection impacts. Estimates put the number of people living with Long COVID globally in the millions, with as many as 400 million people — 6% to 7% of adults — having experienced symptoms at some point. Despite its prevalence, people suffering from Long COVID often face stigma from both their communities and medical providers, including doubts about whether Long COVID is even "real". [^31]
 
 The exact mechanisms behind Long COVID are still being studied, but impacts are increasingly being connected to persistence of the SARS-CoV-2 virus in cell tissue; even after the body's immune system has fought off an initial infection, "reservoirs" of the virus can remain intact. [^32] Studies have shown that vaccination may help reduce the chance of developing Long COVID, and one recent study in particular showed that the combination of an up-to-date COVID and flu vaccine might have an even more positive effect, but the precise impacts remain uncertain. [^33]
 
@@ -163,7 +164,7 @@ The stakes are high, not just because of the direct health risks, but because of
 
 Shame, judgement and blame aren't typically considered to be very effective tools for inspiring change in others, or ourselves, so how *should* we grapple with all this? Emily Dupree, a professor of philosophy and the founder of [Clean Air Club](https://cleanairclub.org/about), writes beautifully about this question and many of the topics touched on in this essay, as well as "the moral psychology of the pandemic, ethics in the midst of collapse, and collective memory" more broadly in her newsletter, [Notes from the Void](https://emilysdupree.substack.com/).
 
-In a recent piece, [I Respect Therefore I Blame](https://emilysdupree.substack.com/p/i-respect-therefore-i-blame), Emily defends the idea that, even though COVID is certainly a systemic issue that institutions bare much of the blame for, we as individuals are to blame as well. Rather than reject blame as a response outright, or reserve it solely for systems and institutions, Emily suggests that it can in fact be a  useful and necessary part of holding people accountable as part of the process of building community with each other. [^52]
+In a recent piece, [I Respect Therefore I Blame](https://emilysdupree.substack.com/p/i-respect-therefore-i-blame), Emily defends the idea that, even though COVID is certainly a systemic issue that institutions bare much of the blame for, we as individuals are to blame as well. Rather than reject blame as a response outright, or reserve it solely for systems and institutions, Emily suggests that it can in fact be a useful and necessary part of holding people accountable as part of the process of building community with each other. [^52]
 
 Specifically, this type of blame is prosocial, not antisocial; it is a show of respect, not disdain; it treats the recipient as a "full participant in moral life", and though it may inflict some suffering upon them, it is not designed to denigrate or excommunicate them. Rather, it is an act which shows that we respect people enough to be honest with them, that they are still "one of us", and that we still have work to do, together.
 
@@ -209,7 +210,7 @@ You and I may not have much influence over the World Trade Organisation, but tha
 
 ## Part Three: Practical tips and actions
 
-![An infographic visualizing layers of defence against respiratory diseases as slices of cheese with holes in them](swiss-cheese.jpg "The Swiss Cheese Respiratory Virus Pandemic Defence visualization from [Virology Down Under](https://virologydownunder.com/the-swiss-cheese-infographic-that-went-viral/))
+![An infographic visualizing layers of defence against respiratory diseases as slices of cheese with holes in them](swiss-cheese.jpg "The Swiss Cheese Respiratory Virus Pandemic Defence visualization from [Virology Down Under](https://virologydownunder.com/the-swiss-cheese-infographic-that-went-viral/)")
 
 The best defence against COVID builds on the recognition that no single intervention is 100% reliable, and that our best bet is to combine multiple layers of protection. The same layers that will help protect against COVID also help limit the spread of other airborne and respiratory viruses such as RSV, the flu, and norovirus, which along with COVID collectively make up the headline-grabbing 'Quadrupledemic'. [^60] Four years into the pandemic, we know better than ever what works and what doesn't. Initial widespread masking and physical distancing was so successful, in fact, that it helped cause an entire strain of influenza to go extinct; the first time such an event is thought to have occurred solely based on behavioural changes. [^61]
 
@@ -263,7 +264,7 @@ As mentioned in [Part One](#part-one-the-elephant-in-every-room), a single negat
 
 After testing positive, the ideal isolation period is at least 10 days. This was the original recommendation by the CDC early on in the pandemic. However, the CEO of Delta Airlines wrote to the CDC in 2021 asking for a reduction to 5 days, which then became the norm despite it having nothing to do with medical best practices and everything to do with Delta's profit margins. [^72] The 10 day isolation period remains relevant, even in 2024, because vaccines do not prevent transmission nor do they noticeably reduce the period during which a person is contagious. [^13] Leaving isolation should ideally only be done after two negative tests taken 24 hours apart.
 
-If you must leave isolation before this — perhaps because you simply cannot afford to take time off work  — then it becomes even more important to take other precautions such as wearing a mask. Communication also becomes critical in this scenario. If you know you are, or were recently, infected then it's important to let those around you know so that they can take their own precautions. Never knowingly spend time with other people when you have COVID if you haven't let them know in advance.
+If you must leave isolation before this — perhaps because you simply cannot afford to take time off work — then it becomes even more important to take other precautions such as wearing a mask. Communication also becomes critical in this scenario. If you know you are, or were recently, infected then it's important to let those around you know so that they can take their own precautions. Never knowingly spend time with other people when you have COVID if you haven't let them know in advance.
 
 ### Get vaccinated regularly
 
@@ -273,7 +274,7 @@ Here in the UK, vaccines are only available through the [NHS](https://www.nhs.uk
 
 As well as boosters — getting the same vaccine multiple times — new versions of vaccines are released semi-regularly in order to better combat new variants of the virus. For maximum protection, it's important to get these updated vaccines when they become available. At the time of writing, several 2024-2025 formula vaccines are now available, such as Comirnaty from Pfizer-BioNTech, and Spikevax from Moderna. [^75] All currently available vaccines offer comparable levels of protection. [^76]
 
-![Infographic explaining how COVID vaccines were developed so quickly](vaccines.jpg "# How have COVID-19 vaccines been developed so fast? by the [British Society for Immunology](https://www.immunology.org/public-information/vaccine-resources/covid-19/covid-19-vaccine-infographics/speed-of-development))
+![Infographic explaining how COVID vaccines were developed so quickly](vaccines.jpg "How have COVID-19 vaccines been developed so fast? by the [British Society for Immunology](https://www.immunology.org/public-information/vaccine-resources/covid-19/covid-19-vaccine-infographics/speed-of-development)")
 
 While all vaccines can have side effects, even serious ones in very rare cases, the evidence is clear that the risks from getting infected with COVID far outweigh the risks of vaccination. This is true not only for adults but also children, according to various recent studies. [^77] Given the speed at which the first COVID vaccines were produced, some were understandably sceptical about their safety. However, vaccines have been repeatedly shown to be safe and, rather some grand conspiracy, the speed of initial development was the result of multiple factors such as: building on existing and proven vaccine technology, securing funding from government bodies, and relying on strong international collaboration. [^78] [^79]
 
@@ -309,7 +310,7 @@ Phew, we made it. To wrap up, let's briefly revisit the question of whether or n
 
 If someone finds compelling reasons (such as those described in [Part Two](#part-two-collective-responsibility-for-collective-liberation)) to continue taking precautions, and is actively taking steps such as those described in [Part Three](#part-three-practical-tips-and-actions), but doesn't think calling all this a "pandemic" anymore is useful: fine! If, however, someone wants to stop using that word because they don't think COVID is serious anymore, despite overwhelming evidence to the contrary, that is a bigger issue. An issue which we can perhaps begin to mitigate by keeping the term "pandemic" alive.
 
-In any case, with the likelihood of another COVID-scale pandemic all but "inevitable" ,[^82] refusing to capitulate to COVID now also helps prepare us for the *next* pandemic, whenever it should arrive.  Rather than see all this as hopelessly depressing, I choose to see it as an opportunity for creating networks of community care, for growing international solidarity, and ultimately for striving towards collective liberation for all.
+In any case, with the likelihood of another COVID-scale pandemic all but "inevitable" ,[^82] refusing to capitulate to COVID now also helps prepare us for the *next* pandemic, whenever it should arrive. Rather than see all this as hopelessly depressing, I choose to see it as an opportunity for creating networks of community care, for growing international solidarity, and ultimately for striving towards collective liberation for all.
 
 ---
 
