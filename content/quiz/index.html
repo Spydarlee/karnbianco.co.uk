@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: auto;
+  margin-bottom: 1.5rem;
+  max-width: 1200px;
+  font-family: verdana;
+  font-size: 1.2rem;
+}
+
+img {
+  max-width: 90%;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.2rem;
+  transition: 0.4s;
+
+  &.parent {
+    margin-top: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.answer {
+  display: none;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: greenyellow;
+}
+
+.grade {
+  padding: 2rem;
+
+  &.platinum{
+    background-color: lightblue;
+  }
+
+  &.gold{
+    background-color: gold;
+  }
+
+  &.silver{
+    background-color: silver;
+  }
+
+  &.bronze{
+    background-color: #CE8946;
+  }
+
+  &.ouch{
+    border: 1px solid black;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<h2>NYE 2024-2025 Quiz!</h2>
+<p>Only click to reveal each question when instructed! Underneath each question you can optionally reveal 3 multiple choice options if you need a hint. Points are awarded as follows:</p>
+<ul>
+  <li>Main answer ✅ <i>without</i> multiple choice 🚫 = <b>2 points</b></li>
+  <li>Main answer ✅ <i>with</i> multiple choice 👀 = <b>1 point</b></li>
+  <li>Bonus answer ✅ = <b>1 point</b></li>
+  <li>Maximum: <b>3 points</b></li>
+</ul>
+
+<hr style="margin-top: 2rem">
+
+
+<button class="accordion parent">Question 0 (TEST)</button>
+<div class="panel">
+  <p><b>Question:</b> How many piercings does the Guinness World Record record holder have as of 2023?</p>
+  <p><b>Bonus:</b> What is their name? / Where do they live?</p>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Elaine_Davidson_Front.jpg/640px-Elaine_Davidson_Front.jpg">
+
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>150</li>
+      <li>1500</li>
+      <li>15000</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>15,000+, Scotland, Elaine Davidson</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 1 (Anime)</button>
+<div class="panel">
+  <p><b>Question:</b> What anime is this music from?</p>
+  <p><b>Bonus:</b> What is the name of the song?</p>
+  <audio controls>
+    <source src="neon-genesis-evangelion.mp3" type="audio/mp3">
+  </audio>
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Escaflowne</li>
+      <li>Neon Genesis Evangelion</li>
+      <li>Ghost in the Shell</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>Sonic, The Cruel Angel's Thesis</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 2 (Rom-Coms)</button>
+<div class="panel">
+  <p><b>Question:</b> In which decade did Harry meet Sally?</p>
+  <p><b>Bonus:</b> <i>Where</i> did Harry first meet Sally?</p>
+  <img src="https://highdefdiscnews.com/wp-content/uploads/2018/12/when_harry_met_sally_30th_anniversary_edition_18.png">
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>70s</li>
+      <li>80s</li>
+      <li>90s</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>70s (1977), Chicago / University of Chicago</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 3 (Games)</button>
+<div class="panel">
+  <p><b>Question:</b> Which spooky GameCube game features this bathtub jump scare?</p>
+  <p><b>Bonus:</b> When was this game released?</p>
+  <img src="https://thecredhulk.wordpress.com/wp-content/uploads/2013/03/eternal-darkness.jpg">
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Resident Evil 3</li>
+      <li>Second Sight</li>
+      <li>Eternal Darkness</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>Eternal Darkness, 2002</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 4 (Lord of the Rings)</button>
+<div class="panel">
+  <p><b>Question:</b> In the Lord of the Rings, what kind of being is Gandalf?</p>
+  <p><b>Bonus:</b> Which two beings of this kind also appear in the Peter Jackson movie trilogy?</p>
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Valar</li>
+      <li>Maiar</li>
+      <li>Grand Elf</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>Maiar, Sauron & Saruman</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 5 (2024 - Music)</button>
+<div class="panel">
+  <p><b>Question:</b> Who was the top artist on Spotify in 2024?</p>
+  <p><b>Bonus:</b> Name one other artist from the top 5</p>
+
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>BTS</li>
+      <li>Ariana Grande</li>
+      <li>Taylor Swift</li>
+    </ol>
+  </div>
+
+  <div class="answer">
+    <p>Taylor Swift, (The Weekn, Bad Bunn, Drake, Billie Eilish)</p>
+  </div>
+
+</div>
+
+<button class="accordion parent">Question 6 (TV & Movies)</button>
+<div class="panel">
+  <p><b>Question:</b> What movie or TV show is this?</p>
+  <p><b>Bonus:</b> What is the name of the main character?</p>
+
+  <img src="https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24179569/andor_prison_beds.jpeg?quality=90&strip=all&crop=0%2C0%2C100%2C100&w=1080">
+
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Severence</li>
+      <li>Andor</li>
+      <li>The Island</li>
+    </ol>
+  </div>
+
+  <div class="answer">
+    <p>Andor, Cassian Andor</p>
+  </div>
+
+</div>
+
+<button class="accordion parent">Question 7 (Plants)</button>
+<div class="panel">
+  <p><b>Question:</b> What is a common name for the family of plants to which the below belong?</p>
+  <p><b>Bonus:</b> What is the family's scientific / botanical name?</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Asteracea_poster_3.jpg/800px-Asteracea_poster_3.jpg">
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Sunflower</li>
+      <li>Marigold</li>
+      <li>Chamomille</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>Sunflower, Asteraceae</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 8 (2024 - Movies)</button>
+<div class="panel">
+  <p><b>Question:</b> What are the sandworms in Dune called (by the locals)?</p>
+  <p><b>Bonus:</b> What is the name of the planet where sandworms live?</p>
+  <img src="https://upload.wikimedia.org/wikipedia/en/3/35/Dune_2021-Sandworm.jpg">
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Harkonnen</li>
+      <li>Muad'Dib</li>
+      <li>Shai-Hulud</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>Shai-Hulud, Arrakis</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 9 (Board Games)</button>
+<div class="panel">
+  <p><b>Question:</b> What was the original name of "Monopoly"?</p>
+  <p><b>Bonus:</b> Who designed the original? / For what purpose?</p>
+  <img src="https://muddleit.com/image/cache/catalog/New%20Toys/Monopoly/2024/Sonic%20Monopoly%20(1)-600x315w.jpg">
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Monopoly & Prosperity</li>
+      <li>The Landlord's Game</li>
+      <li>Free Parking</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>The Landlord's Game, Elizabeth Magie / show that rents enrich property owners and fuck tenants</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 10 (Health)</button>
+<div class="panel">
+  <p><b>Question:</b> What does "COVID" stand for?</p>
+  <p><b>Bonus:</b> What is the name of the virus that causes COVID?</p>
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Coronavirus Disease</li>
+      <li>Coronal Virulent Disease</li>
+      <li>Complex Olfactory Viral Infectious Disease</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>Corona Virus Disease, SARS-CoV-2</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 11 (History)</button>
+<div class="panel">
+  <p><b>Question:</b> In which year did the first intifada start in Palestine?</p>
+  <p><b>Bonus:</b> When did it end? / How did it end?</p>
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>1978</li>
+      <li>1987</li>
+      <li>1993</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>1987, 1993 / signing the first Oslo Accords</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 12 (Card Games)</button>
+<div class="panel">
+  <p><b>Question:</b> In Magic the Gathering, what type of creature is "Karn"?</p>
+  <p><b>Bonus:</b> What does Karn have in common with Karn?</p>
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Gargoyle</li>
+      <li>Golem</li>
+      <li>Gorgon</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>Golem, they're both non-binary</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 13 (Music)</button>
+<div class="panel">
+  <p><b>Question:</b> What is the name of this song?</p>
+  <p><b>Bonus:</b> Who is the artist?</p>
+  <audio controls>
+    <source src="runaway.mp3" type="audio/mp3">
+  </audio>
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Leavin'</li>
+      <li>Misery</li>
+      <li>Runaway</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>Runaway, Del Shannon</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 14 (Anime)</button>
+<div class="panel">
+  <p><b>Question:</b> What is the name of the floating castle in Castle in the Sky?</p>
+  <p><b>Bonus:</b> Who composed the film's soundtrack?</p>
+  <img src="https://i.snap.as/yTqEGPkt.jpg">
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Laputa</li>
+      <li>Avalon</li>
+      <li>Atlantis</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>Laputa, Joe Hisaishi</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 15 (Games)</button>
+<div class="panel">
+  <p><b>Question:</b> What video game series is this music from?</p>
+  <p><b>Bonus:</b> What specific game (or level) is it from?</p>
+  <audio controls>
+    <source src="battery.mp3" type="audio/mp3">
+  </audio>
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Sonic</li>
+      <li>Metroid</li>
+      <li>Contra</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>Sonic, Sonic & Knuckles</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 16 (Rom-Coms)</button>
+<div class="panel">
+  <p><b>Question:</b> What is the name of the 'To all the Boys' TV spin-off?</p>
+  <p><b>Bonus:</b> What is the family name of the main character in the films?</p>
+  <img src="https://reporter.rit.edu:8443/sites/pubDir/slideShow/09-18/1343-2084-696549366.jpeg">
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>To all the Girls</li>
+      <li>Kitty goes to Korea</li>
+      <li>XO, Kitty</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>XO, Kitty, Song Covey</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 17 (Lord of the Rings)</button>
+<div class="panel">
+  <p><b>Question:</b> How many great rings were made for / used by the elves?</p>
+  <p><b>Bonus:</b> What were their names?</p>
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Three</li>
+      <li>Seven</li>
+      <li>Nine</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>3, Narya, Nenya, Vilya</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 18 (Geography)</button>
+<div class="panel">
+  <p><b>Question:</b> What country is Vienna the capital of?</p>
+  <p><b>Bonus:</b> If you head due East from Vienna, which country would you reach first?</p>
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Austria</li>
+      <li>Hungary</li>
+      <li>Slovenia</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>Austria, Slovakia</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 19 (Star Wars)</button>
+<div class="panel">
+  <p><b>Question:</b> What are the names of the two other members of Yoda's species to appear on screen?</p>
+  <p><b>Bonus:</b> What is the name of Yoda's species?</p>
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Grogu and Yaddle</li>
+      <li>Vandar and Grogu</li>
+      <li>The Baby and Minch</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>Grogu and Yaddle, species name is not known</p>
+  </div>
+</div>
+
+<button class="accordion parent">Question 20 (Philosophy)</button>
+<div class="panel">
+  <p><b>Question:</b> In philosophy, "epistemology" is the study of what?</p>
+  <p><b>Bonus:</b> Name one other major branch of philosophy.</p>
+  <img src="https://artincontext.org/wp-content/uploads/2022/05/The-Thinker-Statue-by-Auguste-Rodin.jpg">
+  <button class="accordion">Multiple Choice Options</button>
+  <div class="panel">
+    <ol>
+      <li>Ethics</li>
+      <li>Reality</li>
+      <li>Knowledge</li>
+    </ol>
+  </div>
+  <div class="answer">
+    <p>Knowledge, (Aesthetics, Logic, Metaphysics, Axiology, Political Philosophy)</p>
+  </div>
+</div>
+
+<hr style="margin-top: 2rem">
+
+<h2>Grades</h2>
+<p class="grade platinum">🏅 <b>Platinum</b>: 60 points</p>
+<p class="grade gold">🥇 <b>Gold</b>: 40-59 points</p>
+<p class="grade silver">🥈 <b>Silver</b>: 20-39 points</p>
+<p class="grade bronze">🥉 <b>Bronze</b>: 5-19 points</p>
+<p class="grade ouch">🏆 <b>Participation Trophy</b>: 0-4 points</p>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+      setTimeout(function(){panel.style.maxHeight = null;}, 50);
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+      setTimeout(function(){panel.style.maxHeight = "unset";}, 200);
+    }
+  });
+}
+</script>
+
+</body>
+</html>
