@@ -1,0 +1,23 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Reading
+  order: 3
+  icon: feather:book
+title: Reading
+description: "Stuff I've read."
+---
+<h1>{% icon "feather:book", { "class": "icon-lg" } %}{{title}}</h1>
+<p>{{description}}</p>
+
+<section class="reading">
+	<ol reversed>
+	{% for book in reading_list %}
+		<li class="book">
+			<span title="{{ book.title }}">{{ book.title }}</span>
+			<img class="cover" src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-M.jpg" />
+			<span class="date"> ({{ book.finished }})</span>
+		</li>
+	{% endfor %}
+	</ol>
+</section>
