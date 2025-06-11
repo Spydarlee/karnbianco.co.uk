@@ -22,7 +22,9 @@ module.exports = function(eleventyConfig) {
 		"./node_modules/photoswipe/dist/photoswipe.esm.min.js": "/js/photoswipe.esm.min.js",
     "./node_modules/d3/dist/d3.min.js": "/js/d3.min.js",
     "./node_modules/chart.js/dist/chart.umd.js": "/js/chart.umd.js",
+    "./node_modules/leaflet.fullscreen/icon-fullscreen.svg": "/css/icon-fullscreen.svg"
 	});
+  eleventyConfig.addPassthroughCopy("content/**/*.gpx");
 
 	// Watch content images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg,jpg}");

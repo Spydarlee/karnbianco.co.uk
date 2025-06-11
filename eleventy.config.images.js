@@ -1,6 +1,8 @@
 const path = require("path");
 const sharp = require('sharp');
 const Image = require("@11ty/eleventy-img");
+const exif = require("fast-exif");
+var dms2dec = require('dms2dec');
 
 const GALLERY_THUMBNAIL_WIDTH = 350;
 const LANDSCAPE_LIGHTBOX_IMAGE_WIDTH = 1920;
@@ -78,6 +80,25 @@ module.exports = function(eleventyConfig) {
     src = isFullUrl(src) ? src : relativeToInputPath(this.page.inputPath, src);
     const metadata = await sharp(src).metadata();
 
+    let latlon = [];
+    try {
+      latlon = await exif.read(src).then( exifData => {
+        dec = [null, null];
+        if(exifData && exifData.gps) {
+          dec = dms2dec(
+            exifData.gps.GPSLongitude,
+            exifData.gps.GPSLatitudeRef,
+            exifData.gps.GPSLatitude,
+            exifData.gps.GPSLatitudeRef
+          );
+        }
+        return dec;
+      });
+    } catch(error) {
+      console.log("Error getting GPS location for: " + src)
+      console.log(error);
+    }
+
     let lightboxImageWidth = LANDSCAPE_LIGHTBOX_IMAGE_WIDTH;
     if(metadata.height > metadata.width) {
         lightboxImageWidth = PORTRAIT_LIGHTBOX_IMAGE_WIDTH;
@@ -95,6 +116,9 @@ module.exports = function(eleventyConfig) {
         class="gallery-item"
         data-pswp-width="${image.jpeg[1].width}"
         data-pswp-height="${image.jpeg[1].height}"
+        data-longitude="${latlon[0]}"
+        data-latitude="${latlon[1]}"
+        data-thumbnail="${image.jpeg[0].url}"
         target="_blank">
             <img src="${image.jpeg[0].url}" alt="${alt}" />
         </a>

@@ -8,12 +8,18 @@ layout: layouts/base.njk
 <ul class="post-metadata">
 	<li>📅 <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate('LLLL yyyy') }}</time></li>
 
-  {% if location  %}
+  {% if location %}
 	<li>🌍 {{location}}</li>
   {% endif %}
 </ul>
 
 {{ content | safe }}
+
+{% if showMap %}
+<hr>
+<p>Explore these photos on the map, or <a href="#gallery-{{page.fileSlug}}">jump to the full gallery below 👇</a></p>
+<div id="gallery-map" data-route-file="{{ routeFile }}"></div>
+{% endif %}
 
 {% gallery page.fileSlug %}
   {% for i in range(0, imageCount) -%}

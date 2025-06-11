@@ -22,10 +22,15 @@
     {%- css %}{% include "public/css/base.css" %}{% endcss %}
 		{%- css %}{% include "public/css/index.css" %}{% endcss %}
 		{%- css %}{% include "node_modules/photoswipe/dist/photoswipe.css" %}{% endcss %}
+    {%- css %}{% include "node_modules/leaflet/dist/leaflet.css" %}{% endcss %}
+    {%- css %}{% include "node_modules/leaflet.fullscreen/Control.FullScreen.css" %}{% endcss %}
 		<style>{% getBundle "css" %}</style>
 
 		{#- Javascript bundle #}
 		{%- js %}{% include "node_modules/masonry-layout/dist/masonry.pkgd.min.js" %}{% endjs %}
+    {%- js %}{% include "node_modules/leaflet/dist/leaflet.js" %}{% endjs %}
+    {%- js %}{% include "node_modules/leaflet-gpx/gpx.js" %}{% endjs %}
+    {%- js %}{% include "node_modules/leaflet.fullscreen/Control.FullScreen.js" %}{% endjs %}
 		{%- js %}{% include "public/js/global.js" %}{% endjs %}
 		<script>{% getBundle "js" %}</script>
 
