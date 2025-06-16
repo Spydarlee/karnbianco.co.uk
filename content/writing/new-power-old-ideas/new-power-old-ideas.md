@@ -23,7 +23,7 @@ But what I found in *New Power* was an argument for a particular set of social a
 
 ## Everything old is new again
 
-![](as-was-the-style-at-the-time.png)
+![A screenshot from The Simpsons in which Grandpa Simpson is excitedly pointing at himself and his belt](as-was-the-style-at-the-time.png)
 
 Participatory organisations aren't new, so what *is* new about "new power"? Technology, for one. Digital platforms, such as social media, are key to a "new power community":
 
@@ -41,7 +41,7 @@ The book does briefly concede that "it will be critical to actually reduce wealt
 
 ## Crowds vs. communities
 
-![](crowds.jpg)
+![A black and white photo of a faceless crowd](crowds.jpg)
 
 "The crowd" is at the heart of *New Power*, and while it's never given a precise definition, the picture that emerges throughout the book is not just that of a large group of people, but of a force that can be "channelled" to specific ends.
 
@@ -63,7 +63,7 @@ I don't mean to downplay the importance of efficacy, nor to quibble over finding
 
 ## Old power in new clothes
 
-![](how-do-you-do.png)
+![An image of Steve Buscemi dressed as a teenager holding a skateboard alongside the quote "How do you do, fellow powerholders?"](how-do-you-do.png)
 
 *New Power's* broadly amoral approach to power allows it to seamlessly swap between examples in politics, activism, and plain old capitalist business. The #MeToo movement is cited right alongside case studies about General Electric "blurring the line between the crowd and the corporation" and BrewDog "revolutionizing" the beer industry through deeper engagement with customers, but with no further interrogation of the design and structure of these businesses.
 
@@ -85,7 +85,7 @@ But if someone can, at will, reassert control over the majority's "ability to pr
 
 ## Beware too much of a good thing
 
-![](great-power.png)
+![A photo of someone dressed as Spider-Man talking to a woman with a skeptical look on her face. The first quote reads "With great power comes great respon.." and the response says "But you still have all the power?"](great-power.png)
 
 Despite using the language of empowerment, many examples in *New Power* still rely on making appeals to those in positions of power to do the right thing, rather than building collective capacity to take action directly. Viral online movements aimed at urging celebrities or politicians to act, for instance. Distributing power is just one of many design options. The primary goal is to make people "feel" more powerful (and therefore committed) rather than actually *become* more powerful.
 
@@ -101,7 +101,7 @@ This is one drawback, among many, of treating a social movement like a business,
 
 ## What if we *actually* distributed power?
 
-![](one-for-you.png)
+![A scene from the movie Mean Girls in which Damian hands out gifts while dressed as Santa, with the quote "One for you, and one for you, and one for you, too, Glen Coco, because we're all equals here."](one-for-you.png)
 
 Building organisations and communities that genuinely center autonomy and consensus-making is undoubtedly challenging work. "How might we co-create radically inclusive, non-hierarchical structures that don't get stuck in endless debates and inaction?" is a question worth exploring! But "let's just keep some 'old power' structures in place so they can step in and take control when needed" doesn't strike me as a very inspiring answer. Can't we be more imaginative?
 
