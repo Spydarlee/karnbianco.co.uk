@@ -95,7 +95,7 @@ Part of this stems from the notion that *too* much self-organisation (which is p
 
 Experienced leaders and stewards can surely play useful roles in many organisations, but *New Power* gives no attention to *how* these roles might be created and filled. Is it first come first served? Are we back to following whoever is the most charismatic or outspoken (a flaw of "old power" as the book notes)? Is it those with the most experience? Are they elected? Does the position rotate on a time-limited basis? Are they recallable? What authority do they have, if any? Who grants them that authority? Who can strip it from them, if anyone?
 
-Within the context of a traditional businesses the answer is clearly "whoever already had institutional power and thought this 'new power' stuff was a good idea", but what about grassroots social movements? The book never really provides answers.
+Within the context of a traditional busines the answer is clearly "whoever already had institutional power and thought this 'new power' stuff was a good idea", but what about grassroots social movements? The book never really provides answers.
 
 This is one drawback, among many, of treating a social movement like a business, and vice versa. The limits of imagination enforced by the latter become constraints for the former. This is the best a traditional business can do without looking more deeply at its foundations, including how its owned and funded. But that would be beyond the scope and ambition of the book, so we're left with business-approved solutions slapped onto grassroots social movements.
 
@@ -103,7 +103,7 @@ This is one drawback, among many, of treating a social movement like a business,
 
 ![A scene from the movie Mean Girls in which Damian hands out gifts while dressed as Santa, with the quote "One for you, and one for you, and one for you, too, Glen Coco, because we're all equals here."](one-for-you.png)
 
-Building organisations and communities that genuinely center autonomy and consensus-making is undoubtedly challenging work. "How might we co-create radically inclusive, non-hierarchical structures that don't get stuck in endless debates and inaction?" is a question worth exploring! But "let's just keep some 'old power' structures in place so they can step in and take control when needed" doesn't strike me as a very inspiring answer. Can't we be more imaginative?
+Building organisations and communities that genuinely centre autonomy and consensus-making is undoubtedly challenging work. "How might we co-create radically inclusive, non-hierarchical structures that don't get stuck in endless debates and inaction?" is a question worth exploring! But "let's just keep some 'old power' structures in place so they can step in and take control when needed" doesn't strike me as a very inspiring answer. Can't we be more imaginative?
 
 I would have liked to see examples of *other* successful organisational structures, especially those that don't rely on hierarchical authority. There are many things we can learn from the likes of the Occupy movement, and the book fairly notes that a common issue for many social movements is failing to maintain momentum after big, flashy protests and mobilisations are over. But these observations are coupled with an implication that the best or even *only* solution is "blending old and new power", often in a way that leaves room for co-optation down the line.
 
