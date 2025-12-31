@@ -9,8 +9,8 @@ module.exports = {
 		url: "https://karnbianco.co.uk/about/"
 	},
   blurbs: {
-    writing: "Exploring anti-capitalist and decolonial politics, philosophy, technology, social and ecological justice, collective liberation, degrowth, anarchism, and more.",
-    photos: "A small selection of the many photos I've taken over the years. I tend to focus on landscapes, natural wonders, plants, and animals.",
-    projects: "Games, websites, tools and other (solo and professional) projects that I've worked on."
+    writing: "Writing for sense-making. Topics of interest include anti-capitalist and decolonial politics, philosophy, community technology, social and ecological justice, collective liberation, degrowth, anarchism, games, pop culture, and other personal obsessions.",
+    photos: "Photos of the living world; some from close to home in Scotland, some from faraway adventures, especially long-distance cycle tours.",
+    projects: "Games, websites, digital tools and other projects that I've worked on over the years in either a personal or professional capacity."
   }
 }

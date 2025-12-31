@@ -6,7 +6,7 @@ eleventyNavigation:
   icon: feather:user
 summaryImage: karn-bianco.jpg
 title: About Me
-description: "Hi, I'm Karn (they/them) and I'm a jack of various trades: programmer, writer, amateur photographer, game developer, designer, organiser, dog lover, etc."
+description: "Hi there, I'm Karn (they/them) — I design and build websites, develop games, write words, organise collectively, take photos, and frolic in nature. Among other things."
 ---
 
 <h1>{% icon "feather:user", { "class": "icon-lg" } %} {{title}}</h1>
@@ -14,20 +14,20 @@ description: "Hi, I'm Karn (they/them) and I'm a jack of various trades: program
 
 ![A photo of me, Karn, on top of a snowy mountain with a cloud inversion behind me.](karn-bianco.jpg)
 
-🍩 I'm the **Digital Platform Lead** at [Doughnut Economics Action Lab (DEAL)](https://doughnuteconomics.org/) - an org dedicated to fostering post-capitalist economies that are regenerative and distributive by design. (The views expressed on this website are solely my own, though).
+Thanks for visiting my wee website! Since "we are what we repeatedly do" and all that, here's a bunch of stuff that I spend my time doing:
 
-🎮 I'm a **game developer**. I worked in the games industry for several years before switching gears to focus on the climate crisis. [Check out the games I've worked on.](/tags/games/)
+👩‍💻 I **design and build websites**. My main focus is full-stack web development, but I also have experience across dev ops and UI/UX/product design. [See my web projects.](/tags/websites/)
 
-👩‍💻 I'm a **web designer & developer**. In my current job I am responsible for UI/UX design, product design, and full-stack development for a community platform.
+🎮 I **develop games**. I have nearly a decade of experience working as a software engineer in the games industry, including stints at both tiny indies and big AAA studios. [See the games I've worked on.](/tags/games/)
 
-✍ I'm a **writer**. I write about the climate crisis, technology, politics, and more, both professionally and generally to make sense of the world. [Explore my writing](/writing).
+✏️ I **write**, to try and make sense of the world. Topics of interest include anti-capitalist and decolonial politics, philosophy, community technology, social and ecological justice, collective liberation, degrowth, anarchism, videogames, pop culture, and whatever my latest obsession of the month happens to be. [Explore my writing](/writing).
 
-✊ I'm an **organiser**. In 2018 I helped found the [Game Workers branch of the IWGB](https://www.gameworkers.co.uk/) – the UK's first trade union dedicated to workers in the games industry.
+✊ I **organise** with others. In 2018 I helped found [IWGB Game Workers](https://www.gameworkers.co.uk/) – the UK's first trade union dedicated to empowering workers in the games industry. These days I'm most drawn to autonomous and anarchist organising projects.
 
-👩‍💻 I'm an **open source tinkerer**. I release many of [my own projects](/projects) under open licenses, and I try to [contribute to open source projects](https://github.com/Spydarlee) when I can.
+👩‍💻 I **tinker with open source and community tech projects**. I release many of [my own projects](/projects) under open licenses, and I'm always keen to build and support distributive, community-based alternatives to big tech.
 
-🚵‍♀️ I'm an **outdoorsy person** (when I'm not indoors, which is.. also often). I love hiking, cycling, cycle touring, camping, wild swimming, all the good stuff.
+🚵‍♀️ I **frolic in nature**. I love hiking, cycling, cycle touring, camping, and wild swimming, but when health issues make these difficult, frolicking is the baseline.
 
-📷 I'm an **amateur photographer**. I take a *lot* of [photos](/photos) with a focus on nature, whether it's snowy mountains, lush forests, or tiny flowers and insects.
+📷 I **take photos**, *lots* of photos, mostly of the living world. That could mean snowy mountains, lush forests, or tiny flowers and insects. [Check out some of my photos](/photos).
 
-💌 You can reach me via email at: karn[at]karnbianco.co.uk.
+💌 I **reply to emails**, most of the time. You can reach me at: karn[at]karnbianco.co.uk.
