@@ -46,21 +46,21 @@ Hidden behind concepts like the "[10x engineer](https://dev.to/shelan/who-is-a-1
 
 It's becoming harder and harder to opt out of working on coding projects that rely on LLMs. [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds) stirred up quite a fuss when he start using LLMs to "vibe code" his hobby projects, despite clearly being a *very* accomplished and experienced software developer in his own right. His stance on "AI" now extends to welcoming LLM-generated code in open source projects (including Linux) and being critical of anyone advocating for outright LLM bans. [^6]
 
-I have so far managed to largely avoid LLMs both professionally and personally, and it's my intention to keep doing so for as long as humanly possible. And while I'm under no illusions that individually opting out is going to do much to address the systems and structures that brought us "AI" in the first place, I resonate with slavery historian [Jessica Marie Johnson](https://substack.com/@jessicamariejohnson) when she says:
+More immediately, I've been having [great conversations with folks](https://gfsc.community/how-do-you-fund-a-commons-a-different-kind-of-placecal-release-update/) who are also interested in the kinds of autonomous, communal tech that I am, but are taking a different tack when it comes to "AI", and wondering how I want to engage with those projects. [^7] I have so far managed to largely avoid LLMs both professionally and personally, and right now it's still my intention to keep doing so as far as I possible can. And while I'm under no illusions that individually opting out is going to do much to address the systems and structures that brought us "AI" in the first place, I resonate with slavery historian [Jessica Marie Johnson](https://substack.com/@jessicamariejohnson) when she says on the subject of "AI":
 
 > I continue to believe a small act of non-compliance and opting-out everywhere will not only boost my morale, but, in the long run, will cool my nervous system and save brain cells and attention deficits that I need in my present and future age.
 
-<cite>— [A Reformed Ai Hater](https://substack.com/home/post/p-222380014) [^7]</cite>
+<cite>— [A Reformed Ai Hater](https://substack.com/home/post/p-222380014) [^8]</cite>
 
-In the spirit of keeping my nervous system cool, I do want to extend more grace to those who see all of this differently to me. Especially those who are using "AI" and LLMs to: survive, to get by, to claw back some time and energy from the exploitative capitalist systems that surround us all; those fellow nerds who would *love* to be developing software more collaboratively (as I advocate for above) but don't have the time, resources, or community to do so right now.
+In the spirit of keeping my nervous system cool, I do also, however, want to extend more grace to — and maintain strong connections with — those who see all of this differently to me but are otherwise highly aligned with many of my values and goals. Especially those who are using "AI" and LLMs to: survive, to get by, to claw back some time and energy from the exploitative capitalist systems that surround and permeate us all; particularly those fellow nerds who would *love* to be developing liberatory software and technology more collaboratively (as I advocate for above) but don't have the time, resources, or community to do so right now (because, y'know, capitalism).
 
-I nevertheless remain committed to the abolition of "AI" in almost all of its current forms, and to the fight for more liberatory forms of community-centric technology. I want to keep writing my own code, even when it's bad code. *Especially* when it's bad code, because that's how I get better and continue to develop my craft. I don't want to give up the satisfaction of solving a problem; failures and bumps in the road included. I don't even want to outsource "easy" problems to LLMs, I'd rather strive to use those to create opportunities for newer coders to learn from. [^8]
+Still, I remain committed to the abolition of "AI" in almost all of its current forms, and to the fight for more liberatory forms of community-centric technology. I want to keep writing my own code, even when it's bad code. *Especially* when it's bad code, because that's how I get better and continue to develop my craft. I don't want to give up the satisfaction of solving a problem "by hand" — failures, frictions and bumps in the road included. I want to keep the ends and means of my coding as closely aligned as possible, as a prefigurative practice. I don't even want to outsource "simple" problems to LLMs, I'd rather strive to find ways to turn them into opportunities for newer coders to engage with and learn from, as I did when I was starting out. [^9]
 
-I want to learn from those who find themselves drawn to "AI" in order to better understand what unmet needs those tools are speaking to, so that we might collectively explore less harmful ways of meeting those needs in the future.
+But rather than judge and shun, I want to try to learn from those who *are* drawn to "AI" in order to better understand what unmet needs those tools are speaking to, so that we might try to collectively explore less structurally harmful ways of meeting those needs in the future. (Unless you're a tech bro worshipping at the altar of Altman and Musk, you I'll still judge 😇).
 
 > Technology is neither good nor bad; nor is it neutral.
 
-<cite>— [Technology and History: "Kranzberg's Laws"](https://www.jstor.org/stable/3105385) [^9]</cite>
+<cite>— [Technology and History: "Kranzberg's Laws"](https://www.jstor.org/stable/3105385) [^10]</cite>
 
 [^1]: [Critical Questions about "AI"](https://karnbianco.co.uk/writing/critical-questions-about-ai/), Karn Bianco (July, 2024)
 [^2]: [The State of the Devs 2026 Survey](https://2026.stateofdevs.com/en-US/) (September, 2026)
@@ -68,6 +68,7 @@ I want to learn from those who find themselves drawn to "AI" in order to better 
 [^4]: [Towards Understandable Software](https://gracefulliberty.com/articles/towards-understandable-software/), Anna Libery (March, 2026)
 [^5]: [GitHub ponders kill switch for pull requests to stop AI slop](https://www.theregister.com/software/2026/02/03/github-ponders-kill-switch-for-pull-requests-to-stop-ai-slop/4334869), The Register (February, 2026)
 [^6]: [Linus Torvalds to critics of AI coding in Linux: "Fork it. Or just walk away."](https://arstechnica.com/ai/2026/07/linus-torvalds-to-critics-of-ai-coding-in-linux-fork-it-or-just-walk-away/), Ars Technica (July, 2026)
-[^7]: [A Reformed Ai Hater](https://substack.com/home/post/p-222380014), Jessica Marie Johnson (October 2026)
-[^8]: [The paradox at the heart of AI and science](https://www.youtube.com/watch?v=svl_1upFpQo), Terence Tao (September, 2026)
-[^9]: [Technology and History: "Kranzberg's Laws"](https://www.jstor.org/stable/3105385), JSTOR (July, 1986)
+[^7]: [How do you fund a commons? A different kind of PlaceCal release update](https://gfsc.community/how-do-you-fund-a-commons-a-different-kind-of-placecal-release-update/), Geeks for Social Change (November 2026)
+[^8]: [A Reformed Ai Hater](https://substack.com/home/post/p-222380014), Jessica Marie Johnson (October 2026)
+[^9]: [The paradox at the heart of AI and science](https://www.youtube.com/watch?v=svl_1upFpQo), Terence Tao (September, 2026)
+[^10]: [Technology and History: "Kranzberg's Laws"](https://www.jstor.org/stable/3105385), JSTOR (July, 1986)
